@@ -56,7 +56,7 @@ const TermsOfService = ({ isDarkMode }) => {
             className="flex justify-center mb-6"
             variants={itemVariants}
           >
-            <div className={`w-16 h-16 rounded-2xl flex items-center justify-center ${
+            <motion.div className={`w-16 h-16 rounded-2xl flex items-center justify-center ${
               isDarkMode ? 'bg-violet-600/20' : 'bg-violet-100'
             }`}>
               <FileText className="w-8 h-8 text-violet-600" />
