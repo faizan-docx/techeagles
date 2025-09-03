@@ -277,7 +277,7 @@ const OurTeamPage = ({ isDarkMode }) => {
       setExpandedMember(id);
     }
   };
-
+ 
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
