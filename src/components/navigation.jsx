@@ -57,7 +57,7 @@ const Navigation = ({ isDarkMode, setIsDarkMode }) => {
     { name: 'About', path: '/about' },
     { name: 'Services', path: '/services' },
     { name: 'Projects', path: '/projects' },
-    { name: 'Our Team', path: '/team' },
+    { name: 'Team', path: '/team' },
     { name: 'Contact', path: '/contact' }
   ];
 
