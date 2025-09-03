@@ -201,60 +201,37 @@ const Footer = ({ isDarkMode }) => {
               More Links
             </motion.h3>
             <ul className="space-y-2">
-              {[
-                { name: 'Our Team', path: '/team' },
+                            {[
+                { name: 'Team', path: '/team' },
                 { name: 'Contact', path: '/contact' },
-                { name: 'Privacy Policy', path: '#' },
-                { name: 'Terms of Service', path: '#' }
+                { name: 'Privacy Policy', path: '/privacy' },
+                { name: 'Terms of Service', path: '/terms' }
               ].map((item, index) => (
                 <motion.li 
                   key={item.name}
                   whileHover={{ x: 5 }}
                   transition={{ type: "spring", stiffness: 400 }}
                 >
-                  {item.path === '#' ? (
-                    <a 
-                      href={item.path} 
-                      className={`relative group ${isDarkMode ? 'text-gray-400 hover:text-white' : 'text-gray-600 hover:text-gray-900'}`}
+                  <Link 
+                    to={item.path}
+                    className={`relative group ${isDarkMode ? 'text-gray-400 hover:text-white' : 'text-gray-600 hover:text-gray-900'}`}
+                  >
+                    <motion.span
+                      className="relative"
+                      whileHover={{ scale: 1.05 }}
+                      transition={{ type: "spring", stiffness: 400 }}
                     >
-                      <motion.span
-                        className="relative"
-                        whileHover={{ scale: 1.05 }}
-                        transition={{ type: "spring", stiffness: 400 }}
-                      >
-                        {item.name}
-                        <motion.div
-                          className={`absolute left-0 bottom-0 h-0.5 ${
-                            isDarkMode ? 'bg-cyan-400' : 'bg-violet-600'
-                          }`}
-                          initial={{ width: 0 }}
-                          whileHover={{ width: '100%' }}
-                          transition={{ duration: 0.3 }}
-                        />
-                      </motion.span>
-                    </a>
-                  ) : (
-                    <Link 
-                      to={item.path} 
-                      className={`relative group ${isDarkMode ? 'text-gray-400 hover:text-white' : 'text-gray-600 hover:text-gray-900'}`}
-                    >
-                      <motion.span
-                        className="relative"
-                        whileHover={{ scale: 1.05 }}
-                        transition={{ type: "spring", stiffness: 400 }}
-                      >
-                        {item.name}
-                        <motion.div
-                          className={`absolute left-0 bottom-0 h-0.5 ${
-                            isDarkMode ? 'bg-cyan-400' : 'bg-violet-600'
-                          }`}
-                          initial={{ width: 0 }}
-                          whileHover={{ width: '100%' }}
-                          transition={{ duration: 0.3 }}
-                        />
-                      </motion.span>
-                    </Link>
-                  )}
+                      {item.name}
+                      <motion.div
+                        className={`absolute left-0 bottom-0 h-0.5 ${
+                          isDarkMode ? 'bg-cyan-400' : 'bg-violet-600'
+                        }`}
+                        initial={{ width: 0 }}
+                        whileHover={{ width: '100%' }}
+                        transition={{ duration: 0.3 }}
+                      />
+                    </motion.span>
+                  </Link>
                 </motion.li>
               ))}
             </ul>

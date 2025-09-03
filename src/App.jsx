@@ -7,6 +7,8 @@ import ServicesPage from './components/services';
 import ProjectsPage from './components/projects';
 import OurTeamPage from './components/ourTeam';
 import ContactPage from './components/contact';
+import TermsOfService from './components/termsOfService';
+import PrivacyPolicy from './components/privacyPolicy';
 import Navigation from './components/navigation';
 import Footer from './components/footer';
 
@@ -130,6 +132,8 @@ function App() {
               <Route path="/projects" element={<ProjectsPage isDarkMode={isDarkMode} />} />
               <Route path="/team" element={<OurTeamPage isDarkMode={isDarkMode} />} />
               <Route path="/contact" element={<ContactPage isDarkMode={isDarkMode} />} />
+              <Route path="/terms" element={<TermsOfService isDarkMode={isDarkMode} />} />
+              <Route path="/privacy" element={<PrivacyPolicy isDarkMode={isDarkMode} />} />
             </Routes>
           </motion.div>
         </AnimatePresence>
