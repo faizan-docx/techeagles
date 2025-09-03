@@ -9,11 +9,12 @@ const MotionLink = motion(Link);
 
 const Navigation = ({ isDarkMode, setIsDarkMode }) => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [hoveredItem, setHoveredItem] = useState(null);
 
   // Hover animation for nav links
   const linkVariants = {
     rest: { scale: 1, y: 0 },
-    hover: { scale: 1.1, y: -2, transition: { type: 'spring', stiffness: 300 } },
+    hover: { scale: 1.05, y: -2, transition: { type: 'spring', stiffness: 300 } },
   };
 
   return (
@@ -53,18 +54,21 @@ const Navigation = ({ isDarkMode, setIsDarkMode }) => {
                   initial="rest"
                   whileHover="hover"
                   animate="rest"
-                  className={`relative font-medium transition-colors ${
+                  className={`relative font-medium transition-colors py-2 ${
                     isDarkMode
                       ? 'text-gray-300 hover:text-white'
                       : 'text-gray-700 hover:text-gray-900'
                   }`}
+                  onHoverStart={() => setHoveredItem(item)}
+                  onHoverEnd={() => setHoveredItem(null)}
                 >
                   {item}
-                  {/* Underline animation */}
-                  <motion.span
-                    className="absolute left-0 -bottom-1 h-[2px] bg-gradient-to-r from-violet-600 to-cyan-500 w-0"
-                    whileHover={{ width: '100%' }}
-                    transition={{ duration: 0.3 }}
+                  {/* Enhanced underline animation */}
+                  <motion.div
+                    className="absolute left-0 bottom-0 h-0.5 bg-gradient-to-r from-violet-600 to-cyan-500"
+                    initial={{ width: 0 }}
+                    animate={{ width: hoveredItem === item ? '100%' : 0 }}
+                    transition={{ duration: 0.3, ease: "easeOut" }}
                   />
                 </MotionLink>
               )
@@ -112,10 +116,15 @@ const Navigation = ({ isDarkMode, setIsDarkMode }) => {
             <div className="px-4 py-2 space-y-1">
               {['Home', 'About', 'Services', 'Projects', 'Our Team', 'Contact'].map(
                 (item) => (
-                  <motion.div key={item} whileHover={{ scale: 1.05, x: 5 }}>
+                  <motion.div 
+                    key={item} 
+                    className="relative"
+                    whileHover={{ x: 5 }}
+                    transition={{ type: 'spring', stiffness: 400, damping: 17 }}
+                  >
                     <Link
                       to={item === 'Home' ? '/' : `/${item.toLowerCase().replace(' ', '')}`}
-                      className={`block py-2 px-4 rounded-md font-medium ${
+                      className={`block py-3 px-4 rounded-md font-medium relative ${
                         isDarkMode
                           ? 'text-gray-300 hover:bg-gray-800'
                           : 'text-gray-700 hover:bg-gray-100'
@@ -123,6 +132,13 @@ const Navigation = ({ isDarkMode, setIsDarkMode }) => {
                       onClick={() => setIsMobileMenuOpen(false)}
                     >
                       {item}
+                      {/* Mobile underline animation */}
+                      <motion.div
+                        className="absolute left-0 bottom-0 h-0.5 bg-gradient-to-r from-violet-600 to-cyan-500"
+                        initial={{ width: 0 }}
+                        whileHover={{ width: '100%' }}
+                        transition={{ duration: 0.3 }}
+                      />
                     </Link>
                   </motion.div>
                 )
