@@ -69,25 +69,25 @@ const AboutPage = ({ isDarkMode }) => {
   // Timeline data
   const timeline = [
     {
-      year: '2018',
+      year: '2025',
       title: 'Founded',
       description: 'TechEagles was established with a vision to revolutionize digital solutions.',
       icon: Clock
     },
     {
-      year: '2019',
+      year: '2025',
       title: 'First Major Client',
       description: 'Secured our first enterprise client and delivered a successful AI implementation.',
       icon: Award
     },
     {
-      year: '2020',
+      year: '2025',
       title: 'Team Expansion',
       description: 'Grew our team to 15 experts across development, design, and data science.',
       icon: Users
     },
     {
-      year: '2022',
+      year: '2025',
       title: 'Award Recognition',
       description: 'Received "Most Innovative Tech Solution" at the Global Tech Awards.',
       icon: Heart
@@ -149,7 +149,7 @@ const AboutPage = ({ isDarkMode }) => {
               <h2 className={`text-3xl font-bold mb-6 ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>Our Story</h2>
               <div className={`space-y-4 ${isDarkMode ? 'text-gray-300' : 'text-gray-600'}`}>
                 <p>
-                  Founded in 2018, TechEagles began with a simple mission: to help businesses harness the power of technology to solve complex challenges and achieve their goals.
+                  Founded in 2025, TechEagles began with a simple mission: to help businesses harness the power of technology to solve complex challenges and achieve their goals.
                 </p>
                 <p>
                   What started as a small team of developers has grown into a multidisciplinary agency with expertise in AI, cloud computing, cybersecurity, and user experience design.

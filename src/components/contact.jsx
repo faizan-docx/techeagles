@@ -65,8 +65,8 @@ const ContactPage = ({ isDarkMode }) => {
     {
       icon: Phone,
       title: 'Call Us',
-      details: '+91 9313924875',
-      
+      details2: '+91 9313924875',
+      details: '+91 6006450679',
       link: 'tel:+91 9313924875'
     },
     {

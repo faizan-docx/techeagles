@@ -250,7 +250,7 @@ const Footer = ({ isDarkMode }) => {
               {[
                 'Online/Remote',
                 'info@techeagles.com',
-                '+91 +91 9313924875'
+                '+91-6006450679 / +91 9313924875'
               ].map((item, index) => (
                 <motion.li 
                   key={index}

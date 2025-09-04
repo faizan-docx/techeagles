@@ -5,8 +5,6 @@ import {
   Users, 
   Linkedin, 
   Github, 
-  Mail,
-  Instagram,
   Award,
   Calendar,
   MapPin,
@@ -22,6 +20,22 @@ const OurTeamPage = ({ isDarkMode }) => {
   const teamMembers = [
     {
       id: 1,
+      name: 'Deepank Singh',
+      role: 'Director',
+      image: '/team-images/Deepank_Singh.png',
+      bio: 'Shaping the future direction and process of TechEagles.',
+      fullBio: 'Deepank leads full Start-up with a forward-thinking approach and deep understanding of technology trends, Harshit helps shape the organization\'s goals and future initiatives.',
+      skills: ['Strategic Planning', 'Vision Development', 'Technology Trends', 'Innovation'],
+      social: {
+        linkedin: 'https://www.linkedin.com/in/harshit-mehra-185b35217/',
+        instagram: 'https://www.instagram.com/harshit.mehra_27/',
+        github: 'https://github.com/Harshitmehra-270709',
+        email: 'Mehra.harshit27@gmail.com'
+      },
+      funFact: 'Singh enjoys researching emerging technologies and their potential impact on society.'
+    },
+    {
+      id: 2,
       name: 'Amaan Naseh',
       role: 'Chairperson',
       image: '/team-images/amaan_naseh.png',
@@ -37,37 +51,22 @@ const OurTeamPage = ({ isDarkMode }) => {
       funFact: 'Amaan is passionate about mentoring young tech enthusiasts and building inclusive communities.'
     },
     {
-      id: 2,
-      name: 'Abhishek',
-      role: 'Secretary',
-      image: '/team-images/abhishek.png',
-      bio: 'Managing operations and ensuring smooth coordination across all TechEagles activities.',
-      fullBio: 'Abhishek serves as the Secretary of TechEagles, handling administrative duties and ensuring effective communication across all departments. With excellent organizational skills and attention to detail, Abhishek keeps the team aligned and operations running smoothly.',
-      skills: ['Administration', 'Communication', 'Organization', 'Coordination'],
-      social: {
-        linkedin: 'https://linkedin.com',
-        instagram: 'https://instagram.com',
-        github: 'https://github.com',
-        email: 'abhishek@techeagles.com'
-      },
-      funFact: 'Abhishek enjoys documenting processes and creating efficient workflows for the team.'
-    },
-    {
       id: 3,
-      name: 'Harshit Mehra',
-      role: 'Vision Lead',
-      image: '/team-images/harshit_mehra.png',
-      bio: 'Shaping the future direction and strategic vision of TechEagles.',
-      fullBio: 'Harshit leads the Vision team, responsible for defining the long-term strategic direction of TechEagles. With a forward-thinking approach and deep understanding of technology trends, Harshit helps shape the organization\'s goals and future initiatives.',
-      skills: ['Strategic Planning', 'Vision Development', 'Technology Trends', 'Innovation'],
+      name: 'Arpit Parashar',
+      role: 'Growth and Expansion Chief',
+      image: '/team-images/Arpit_Parashar.png',
+      bio: 'Driving growth initiatives and expanding TechEagles reach across new markets and opportunities.',
+      fullBio: 'Arpit leads the Growth and Expansion initiatives at TechEagles, focusing on scaling the organization and identifying new opportunities for development. With strategic thinking and market analysis skills, Arpit helps TechEagles reach new heights and expand its impact.',
+      skills: ['Growth Strategy', 'Market Analysis', 'Business Development', 'Strategic Planning'],
       social: {
         linkedin: 'https://linkedin.com',
         instagram: 'https://instagram.com',
         github: 'https://github.com',
-        email: 'harshit@techeagles.com'
+        email: 'arpit@techeagles.com'
       },
-      funFact: 'Harshit enjoys researching emerging technologies and their potential impact on society.'
+      funFact: 'Arpit enjoys analyzing market trends and finding innovative ways to scale business operations.'
     },
+   
     {
       id: 4,
       name: 'Faizan Ahmed',
@@ -175,8 +174,8 @@ const OurTeamPage = ({ isDarkMode }) => {
       skills: ['Manual Testing', 'Automation', 'Test Strategy', 'QA Processes'],
       social: {
         linkedin: 'https://www.linkedin.com/in/ananya-sinha-87407b286/',
-        instagram: 'https://instagram.com',
-        github: 'https://github.com',
+        instagram: 'https://instagram.com/ananyasinha_26',
+        github: ' https://github.com/Ananyasinha7',
         email: 'anany08a@gmail.com'
       },
       funFact: 'Ananya enjoys building automation suites and improving test coverage.'
@@ -254,10 +253,10 @@ const OurTeamPage = ({ isDarkMode }) => {
       fullBio: 'Deepak serves as the Cybersecurity Advisor at TechEagles, providing expert guidance on security strategies and risk management. With extensive experience in cybersecurity frameworks and threat analysis, Deepak helps ensure TechEagles maintains the highest standards of digital security and compliance.',
       skills: ['Security Frameworks', 'Risk Assessment', 'Threat Analysis', 'Compliance'],
       social: {
-        linkedin: 'https://linkedin.com',
-        instagram: 'https://instagram.com',
-        github: 'https://github.com',
-        email: 'deepak@techeagles.com'
+        linkedin: 'www.linkedin.com/in/deepakbansalll',
+        instagram: 'https://instagram.com/',
+        github: 'https://github.com/strangerdeeps',
+        email: 'deepsbansal0@gmail.com'
       },
       funFact: 'Deepak enjoys staying updated with the latest cybersecurity trends and threat intelligence.'
     },
@@ -276,12 +275,46 @@ const OurTeamPage = ({ isDarkMode }) => {
         email: 'kalisingh2277@gmail.com'
       },
       funFact: 'Kali enjoys optimizing development workflows and implementing efficient project management practices.'
+    },
+    {
+      id: 17,
+      name: 'Harshit Mehra',
+      role: 'Vision Lead',
+      image: '/team-images/harshit_mehra.png',
+      bio: 'Shaping the future direction and strategic vision of TechEagles.',
+      fullBio: 'Harshit leads the Vision team, responsible for defining the long-term strategic direction of TechEagles. With a forward-thinking approach and deep understanding of technology trends, Harshit helps shape the organization\'s goals and future initiatives.',
+      skills: ['Strategic Planning', 'Vision Development', 'Technology Trends', 'Innovation'],
+      social: {
+        linkedin: 'https://www.linkedin.com/in/harshit-mehra-185b35217/',
+        instagram: 'https://www.instagram.com/harshit.mehra_27/',
+        github: 'https://github.com/Harshitmehra-270709',
+        email: 'Mehra.harshit27@gmail.com'
+      },
+      funFact: 'Harshit enjoys researching emerging technologies and their potential impact on society.'
+    },
+    {
+      id: 16,
+      name: 'Abhishek',
+      role: 'Secretary',
+      image: '/team-images/abhishek.png',
+      bio: 'Managing operations and ensuring smooth coordination across all TechEagles activities.',
+      fullBio: 'Abhishek serves as the Secretary of TechEagles, handling administrative duties and ensuring effective communication across all departments. With excellent organizational skills and attention to detail, Abhishek keeps the team aligned and operations running smoothly.',
+      skills: ['Administration', 'Communication', 'Organization', 'Coordination'],
+      social: {
+        linkedin: 'https://linkedin.com',
+        instagram: 'https://instagram.com',
+        github: 'https://github.com',
+        email: 'abhishek@techeagles.com'
+      },
+      funFact: 'Abhishek enjoys documenting processes and creating efficient workflows for the team.'
     }
   ];
+  
+    
 
   // Team stats
   const teamStats = [
-    { icon: Users, value: '16', label: 'Team Members' },
+    { icon: Users, value: '17', label: 'Team Members' },
     { icon: Award, value: '10+', label: 'Years Combined Experience' },
     { icon: Calendar, value: '2025', label: 'Founded In' },
     { icon: MapPin, value: '1', label: 'Countries' },
@@ -397,12 +430,7 @@ const OurTeamPage = ({ isDarkMode }) => {
                           <a href={member.social.github} className={`w-8 h-8 rounded-full flex items-center justify-center ${isDarkMode ? 'bg-gray-800 text-cyan-400' : 'bg-white text-violet-600'} hover:scale-110 transition-transform`}>
                           <Github className="w-4 h-4" />
                         </a>
-                          <a href={member.social.instagram} className={`w-8 h-8 rounded-full flex items-center justify-center ${isDarkMode ? 'bg-gray-800 text-cyan-400' : 'bg-white text-violet-600'} hover:scale-110 transition-transform`}>
-                            <Instagram className="w-4 h-4" />
-                          </a>
-                          <a href={`mailto:${member.social.email}`} className={`w-8 h-8 rounded-full flex items-center justify-center ${isDarkMode ? 'bg-gray-800 text-cyan-400' : 'bg-white text-violet-600'} hover:scale-110 transition-transform`}>
-                          <Mail className="w-4 h-4" />
-                        </a>
+                          
                       </div>
                     </div>
                   </div>
@@ -472,12 +500,7 @@ const OurTeamPage = ({ isDarkMode }) => {
                           <a href={member.social.github} className={`w-8 h-8 rounded-full flex items-center justify-center ${isDarkMode ? 'bg-gray-800 text-cyan-400' : 'bg-white text-violet-600'} hover:scale-110 transition-transform`}>
                             <Github className="w-4 h-4" />
                           </a>
-                          <a href={member.social.instagram} className={`w-8 h-8 rounded-full flex items-center justify-center ${isDarkMode ? 'bg-gray-800 text-cyan-400' : 'bg-white text-violet-600'} hover:scale-110 transition-transform`}>
-                            <Instagram className="w-4 h-4" />
-                          </a>
-                          <a href={`mailto:${member.social.email}`} className={`w-8 h-8 rounded-full flex items-center justify-center ${isDarkMode ? 'bg-gray-800 text-cyan-400' : 'bg-white text-violet-600'} hover:scale-110 transition-transform`}>
-                            <Mail className="w-4 h-4" />
-                          </a>
+                          
                         </div>
                       </div>
                     </div>
