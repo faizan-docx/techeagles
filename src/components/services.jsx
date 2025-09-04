@@ -441,9 +441,7 @@ const ServicesPage = ({ isDarkMode }) => {
             <button onClick={() => navigate('/contact')} className="bg-white text-violet-700 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-all duration-300 transform hover:-translate-y-1">
               Get Started Today
             </button>
-            <button onClick={() => navigate('/contact')} className={`bg-transparent border border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white/10 transition-all duration-300 transform hover:-translate-y-1`}>
-              Schedule a Consultation
-            </button>
+            
           </div>
         </div>
       </section>
@@ -547,17 +545,7 @@ const ServicesPage = ({ isDarkMode }) => {
                     </div>
                   </div>
                   
-                  <div className="flex flex-wrap gap-4">
-                    <button className="flex items-center px-6 py-3 rounded-lg bg-gradient-to-r from-violet-600 to-cyan-500 text-white hover:shadow-lg transition-all">
-                      <MessageSquare className="w-5 h-5 mr-2" />
-                      Discuss This Service
-                    </button>
-                    
-                    <button className={`flex items-center px-6 py-3 rounded-lg ${isDarkMode ? 'bg-gray-800 text-gray-300 hover:bg-gray-700' : 'bg-gray-100 text-gray-700 hover:bg-gray-200'} transition-all`}>
-                      Download Service PDF
-                      <ArrowRight className="w-4 h-4 ml-2" />
-                    </button>
-                  </div>
+                
                 </div>
               </motion.div>
             </div>
