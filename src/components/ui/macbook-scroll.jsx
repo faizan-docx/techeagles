@@ -14,10 +14,11 @@ export const MacbookScroll = ({ src = "/linear.webp", showGradient = false, titl
     }
   }, []);
 
-  const scaleX = useTransform(scrollYProgress, [0, 0.4], [1.15, isMobile ? 1 : 1.4]);
-  const scaleY = useTransform(scrollYProgress, [0, 0.4], [0.65, isMobile ? 1 : 1.4]);
-  const translate = useTransform(scrollYProgress, [0, 1], [0, 1300]);
-  const rotate = useTransform(scrollYProgress, [0.1, 0.15, 0.4], [-26, -26, 0]);
+  // Lighter animation ranges to reduce lag
+  const scaleX = useTransform(scrollYProgress, [0, 0.25], [1.05, isMobile ? 1 : 1.15]);
+  const scaleY = useTransform(scrollYProgress, [0, 0.25], [0.85, isMobile ? 1 : 1.1]);
+  const translate = useTransform(scrollYProgress, [0, 1], [0, 600]);
+  const rotate = useTransform(scrollYProgress, [0.05, 0.15], [-12, 0]);
   const textTransform = useTransform(scrollYProgress, [0, 0.3], [0, 100]);
   const textOpacity = useTransform(scrollYProgress, [0, 0.2], [1, 0]);
 
