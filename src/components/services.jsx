@@ -21,10 +21,13 @@ import {
   Pause
 } from 'lucide-react';
 import CardSpotlight from './ui/card-spotlight';
+import Meteors from './ui/Meteors';
+import { useNavigate } from 'react-router-dom';
 
 const ServicesPage = ({ isDarkMode }) => {
   const [activeService, setActiveService] = useState(null);
   const [isVideoPlaying, setIsVideoPlaying] = useState(false);
+  const navigate = useNavigate();
 
   // Services data
   const services = [
@@ -373,7 +376,8 @@ const ServicesPage = ({ isDarkMode }) => {
               viewport={{ once: true }}
               className="space-y-8"
             >
-              <div className={`p-6 rounded-xl ${isDarkMode ? 'bg-gray-800' : 'bg-gray-50'}`}>
+              <div className={`p-6 rounded-xl relative overflow-hidden ${isDarkMode ? 'bg-gray-800' : 'bg-gray-50'}`}>
+                <Meteors number={14} />
                 <div className="flex items-start mb-4">
                   <div className={`w-12 h-12 rounded-lg ${isDarkMode ? 'bg-violet-900/30' : 'bg-violet-100'} flex items-center justify-center mr-4 flex-shrink-0`}>
                     <span className={`text-lg font-bold ${isDarkMode ? 'text-cyan-400' : 'text-violet-600'}`}>1</span>
@@ -387,7 +391,8 @@ const ServicesPage = ({ isDarkMode }) => {
                 </div>
               </div>
 
-              <div className={`p-6 rounded-xl ${isDarkMode ? 'bg-gray-800' : 'bg-gray-50'}`}>
+              <div className={`p-6 rounded-xl relative overflow-hidden ${isDarkMode ? 'bg-gray-800' : 'bg-gray-50'}`}>
+                <Meteors number={14} />
                 <div className="flex items-start mb-4">
                   <div className={`w-12 h-12 rounded-lg ${isDarkMode ? 'bg-violet-900/30' : 'bg-violet-100'} flex items-center justify-center mr-4 flex-shrink-0`}>
                     <span className={`text-lg font-bold ${isDarkMode ? 'text-cyan-400' : 'text-violet-600'}`}>2</span>
@@ -401,7 +406,8 @@ const ServicesPage = ({ isDarkMode }) => {
                 </div>
               </div>
 
-              <div className={`p-6 rounded-xl ${isDarkMode ? 'bg-gray-800' : 'bg-gray-50'}`}>
+              <div className={`p-6 rounded-xl relative overflow-hidden ${isDarkMode ? 'bg-gray-800' : 'bg-gray-50'}`}>
+                <Meteors number={14} />
                 <div className="flex items-start mb-4">
                   <div className={`w-12 h-12 rounded-lg ${isDarkMode ? 'bg-violet-900/30' : 'bg-violet-100'} flex items-center justify-center mr-4 flex-shrink-0`}>
                     <span className={`text-lg font-bold ${isDarkMode ? 'text-cyan-400' : 'text-violet-600'}`}>3</span>
@@ -432,10 +438,10 @@ const ServicesPage = ({ isDarkMode }) => {
             Let's discuss how our services can help you achieve your goals and drive innovation.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-white text-violet-700 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-all duration-300 transform hover:-translate-y-1">
+            <button onClick={() => navigate('/contact')} className="bg-white text-violet-700 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-all duration-300 transform hover:-translate-y-1">
               Get Started Today
             </button>
-            <button className={`bg-transparent border border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white/10 transition-all duration-300 transform hover:-translate-y-1`}>
+            <button onClick={() => navigate('/contact')} className={`bg-transparent border border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white/10 transition-all duration-300 transform hover:-translate-y-1`}>
               Schedule a Consultation
             </button>
           </div>

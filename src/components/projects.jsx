@@ -18,10 +18,13 @@ import {
   Brain,
   Rocket
 } from 'lucide-react';
+import Meteors from './ui/Meteors';
+import { useNavigate } from 'react-router-dom';
 
 const ProjectsPage = ({ isDarkMode }) => {
   const [activeFilter, setActiveFilter] = useState('all');
   const [selectedProject, setSelectedProject] = useState(null);
+  const navigate = useNavigate();
 
   // Project categories
   const categories = [
@@ -216,7 +219,10 @@ const ProjectsPage = ({ isDarkMode }) => {
   return (
     <div className="py-20">
       {/* Hero Section */}
-      <section className={`py-16 ${isDarkMode ? 'bg-gray-900/30' : 'bg-white'}`}>
+      <section className={`py-16 relative overflow-hidden ${isDarkMode ? 'bg-gray-900/30' : 'bg-white'}`}>
+        <div className="pointer-events-none absolute inset-0">
+          <Meteors number={20} />
+        </div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -325,7 +331,7 @@ const ProjectsPage = ({ isDarkMode }) => {
           <p className="text-xl text-cyan-100 mb-10 max-w-2xl mx-auto">
             Let's work together to create something amazing. Our team is ready to bring your ideas to life.
           </p>
-          <button className="bg-white text-violet-700 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-all duration-300 transform hover:-translate-y-1">
+          <button onClick={() => navigate('/contact')} className="bg-white text-violet-700 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-all duration-300 transform hover:-translate-y-1">
             Start Your Project Today
           </button>
         </div>

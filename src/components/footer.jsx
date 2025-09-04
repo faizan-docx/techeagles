@@ -248,9 +248,9 @@ const Footer = ({ isDarkMode }) => {
             </motion.h3>
             <ul className={`space-y-2 ${isDarkMode ? 'text-gray-400' : 'text-gray-600'}`}>
               {[
-                '123 Tech Avenue, San Francisco, CA',
+                'Online/Remote',
                 'info@techeagles.com',
-                '+1 (555) 123-4567'
+                '+91 +91 9313924875'
               ].map((item, index) => (
                 <motion.li 
                   key={index}

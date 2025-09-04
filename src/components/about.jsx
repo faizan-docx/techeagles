@@ -11,6 +11,8 @@ import {
   Clock
 } from 'lucide-react';
 
+import Meteors from './ui/Meteors';
+
 const AboutPage = ({ isDarkMode }) => {
   // Team members data
   const teamMembers = [
@@ -132,7 +134,10 @@ const AboutPage = ({ isDarkMode }) => {
       </section>
 
       {/* Story Section */}
-      <section className={`py-16 ${isDarkMode ? 'bg-gray-950' : 'bg-gray-50'}`}>
+      <section className={`py-16 relative overflow-hidden ${isDarkMode ? 'bg-gray-950' : 'bg-gray-50'}`}>
+        <div className="pointer-events-none absolute inset-0">
+          <Meteors number={20} />
+        </div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <motion.div
@@ -229,7 +234,7 @@ const AboutPage = ({ isDarkMode }) => {
             <div className="absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-gradient-to-b from-violet-600 to-cyan-500 hidden md:block"></div>
             
             {/* Timeline items */}
-            <div className="space-y-12">
+            <div className="space-y-12 relative z-10">
               {timeline.map((item, index) => {
                 const IconComponent = item.icon;
                 return (

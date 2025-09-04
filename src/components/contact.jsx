@@ -65,9 +65,9 @@ const ContactPage = ({ isDarkMode }) => {
     {
       icon: Phone,
       title: 'Call Us',
-      details: '9313924875',
+      details: '+91 9313924875',
       
-      link: 'tel:9313924875'
+      link: 'tel:+91 9313924875'
     },
     {
       icon: MapPin,
@@ -340,9 +340,12 @@ const ContactPage = ({ isDarkMode }) => {
               className="space-y-12"
             >
               {/* Removed map as requested; keeping only FAQ */}
-              <div>
-                <h3 className={`text-xl font-semibold mb-6 ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>Frequently Asked Questions</h3>
-                <div className="space-y-4">
+              <div className="relative overflow-hidden">
+                <div className="pointer-events-none absolute inset-0">
+                  <Meteors number={18} />
+                </div>
+                <h3 className={`relative z-10 text-xl font-semibold mb-6 ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>Frequently Asked Questions</h3>
+                <div className="relative z-10 space-y-4">
                   {faqItems.map((item, index) => (
                     <div 
                       key={index} 
@@ -379,7 +382,7 @@ const ContactPage = ({ isDarkMode }) => {
               Email Us Now
             </a>
             <a 
-              href="tel:9313924875" 
+              href="tel:+91 9313924875" 
               className="bg-transparent border border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white/10 transition-all duration-300"
             >
               Call Us Now

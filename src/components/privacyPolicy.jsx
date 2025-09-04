@@ -276,8 +276,8 @@ const PrivacyPolicy = ({ isDarkMode }) => {
             <div className={`${isDarkMode ? 'bg-gray-800/50' : 'bg-gray-50'} p-4 rounded-lg`}>
               <p className={`${isDarkMode ? 'text-gray-300' : 'text-gray-700'}`}>
                 <strong>Email:</strong> privacy@techeagles.com<br />
-                <strong>Phone:</strong> +1 (555) 123-4567<br />
-                <strong>Address:</strong> 123 Tech Avenue, San Francisco, CA<br />
+                <strong>Phone:</strong> +91 +91 9313924875<br />
+                <strong>Address:</strong> Online/Remote<br />
                 <strong>Data Protection Officer:</strong> dpo@techeagles.com
               </p>
             </div>
