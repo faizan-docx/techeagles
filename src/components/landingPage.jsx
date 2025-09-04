@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { useNavigate } from 'react-router-dom';
+import { MacbookScroll } from './ui/macbook-scroll';
 
 const LandingPage = ({ isDarkMode }) => {
   const navigate = useNavigate();
@@ -88,7 +89,7 @@ const LandingPage = ({ isDarkMode }) => {
   };
 
   return (
-    <div className={`min-h-screen flex items-center justify-center relative overflow-hidden ${isDarkMode ? 'bg-gray-900' : 'bg-gray-50'}`}>
+    <div className={`min-h-screen flex flex-col items-center justify-between relative overflow-hidden ${isDarkMode ? 'bg-gray-900' : 'bg-gray-50'}`}>
       {/* Animated Background Elements */}
       <motion.div
         className="absolute top-20 left-20 w-32 h-32 rounded-full opacity-10 blur-xl"
@@ -138,18 +139,19 @@ const LandingPage = ({ isDarkMode }) => {
         animate="rotate"
       />
 
-      <motion.div 
-        className="text-center px-4 relative z-10"
-        variants={containerVariants}
-        initial="hidden"
-        animate="visible"
-      >
+      <div className="w-full flex-1 flex flex-col items-center justify-center relative z-10 px-4">
+        <motion.div 
+          className="w-full max-w-4xl flex flex-col items-center text-center space-y-6 mt-16 md:mt-24"
+          variants={containerVariants}
+          initial="hidden"
+          animate="visible"
+        >
         {/* Enhanced Title with Letter Animation */}
         <motion.div className="mb-6">
-          {Array.from("Welcome to TechEagles").map((letter, index) => (
+          {Array.from("Building Digital Solutions that Drive Growth").map((letter, index) => (
             <motion.span
               key={index}
-              className={`inline-block text-4xl md:text-5xl font-bold ${
+              className={`inline-block text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold ${
                 isDarkMode ? 'text-white' : 'text-gray-900'
               }`}
               variants={{
@@ -177,34 +179,20 @@ const LandingPage = ({ isDarkMode }) => {
           initial="hidden"
           animate="visible"
           transition={{ delay: 0.5 }}
-          className="mb-8"
         >
-          <motion.span 
-            className={`text-xl md:text-2xl ${isDarkMode ? 'text-cyan-400' : 'text-violet-600'} font-medium relative`}
-            whileHover={{ scale: 1.05 }}
-            transition={{ type: "spring", stiffness: 300 }}
-          >
-            <motion.span
-              className="absolute -inset-1 bg-gradient-to-r from-transparent via-current to-transparent opacity-0"
-              whileHover={{ opacity: 0.3 }}
-              transition={{ duration: 0.3 }}
-            />
-            Transforming your ideas into digital reality
-          </motion.span>
+          <p className={`text-lg sm:text-xl md:text-2xl lg:text-3xl ${isDarkMode ? 'text-cyan-400' : 'text-violet-600'} font-medium`}>
+            From idea to execution, we craft products that help your business scale in the digital age.
+          </p>
         </motion.div>
         
         <motion.p 
-          className={`max-w-2xl mx-auto text-lg ${isDarkMode ? 'text-gray-300' : 'text-gray-600'} mb-8`}
+          className={`max-w-3xl mx-auto text-base sm:text-lg md:text-xl ${isDarkMode ? 'text-gray-300' : 'text-gray-600'}`}
           variants={itemVariants}
         >
-          We create innovative digital solutions that help businesses thrive in the modern world. 
-          Our team of experts is ready to bring your vision to life.
+          Our team blends creativity, technology, and strategy to deliver innovative solutions tailored to your vision.
         </motion.p>
         
-        <motion.div
-          variants={itemVariants}
-          className="mt-6"
-        >
+        <motion.div variants={itemVariants}>
           <motion.button
             onClick={handleStartProject}
             whileHover={{ 
@@ -232,11 +220,11 @@ const LandingPage = ({ isDarkMode }) => {
               whileHover={{ scale: 1.05 }}
               transition={{ type: "spring", stiffness: 400 }}
             >
-              Start Your Project
+              Let’s Get Started
             </motion.span>
           </motion.button>
         </motion.div>
-
+        
         {/* Additional Floating Elements */}
         <motion.div
           className={`absolute -top-10 -left-10 w-6 h-6 rounded-full ${isDarkMode ? 'bg-cyan-300' : 'bg-violet-400'} opacity-40`}
@@ -251,9 +239,21 @@ const LandingPage = ({ isDarkMode }) => {
           animate="float"
           transition={{ delay: 2.5, duration: 5 }}
         />
-      </motion.div>
+        </motion.div>
+      </div>
+
+      <div className="w-full flex justify-center pb-8">
+        <MacbookScroll 
+          src="/linear.webp" 
+          showGradient={false}
+          screenTitle="See Your Ideas Come Alive"
+          screenSubtitle=""
+          screenDescription=""
+        />
+      </div>
     </div>
   );
 };
 
 export default LandingPage;
+
