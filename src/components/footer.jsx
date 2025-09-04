@@ -2,7 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import EagleLogo from './eagleLogo';
-import logo from '/logo.jpeg';
+import logo from '/logo.png';
 
 const Footer = ({ isDarkMode }) => {
   // Animation variants
