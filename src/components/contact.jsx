@@ -64,16 +64,16 @@ const ContactPage = ({ isDarkMode }) => {
     {
       icon: Phone,
       title: 'Call Us',
-      details: '+1 (555) 123-4567',
-      description: 'Mon-Fri from 8am to 6pm',
-      link: 'tel:+15551234567'
+      details: '9313924875',
+      
+      link: 'tel:9313924875'
     },
     {
       icon: MapPin,
-      title: 'Visit Us',
-      details: '123 Tech Avenue, San Francisco, CA 94103',
-      description: 'Come say hello at our office',
-      link: 'https://maps.google.com'
+      title: 'Work Location',
+      details: 'Online / Remote',
+      description: 'We work with clients worldwide',
+      link: null
     },
     {
       icon: Clock,
@@ -329,7 +329,7 @@ const ContactPage = ({ isDarkMode }) => {
               </form>
             </motion.div>
             
-            {/* Map & FAQ */}
+            {/* FAQ */}
             <motion.div
               initial={{ opacity: 0, x: 30 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -337,28 +337,7 @@ const ContactPage = ({ isDarkMode }) => {
               viewport={{ once: true }}
               className="space-y-12"
             >
-              {/* Map */}
-              <div>
-                <h3 className={`text-xl font-semibold mb-4 ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>Our Location</h3>
-                <div className={`rounded-xl overflow-hidden shadow-lg ${isDarkMode ? 'bg-gray-800' : 'bg-gray-100'} h-64`}>
-                  <iframe 
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d100939.98555098464!2d-122.507640204152!3d37.757814996609724!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80859a6d00690021%3A0x4a501367f076adff!2sSan%20Francisco%2C%20CA!5e0!3m2!1sen!2sus!4v1661190187796!5m2!1sen!2sus" 
-                    width="100%" 
-                    height="100%" 
-                    style={{ border: 0 }} 
-                    allowFullScreen="" 
-                    loading="lazy" 
-                    referrerPolicy="no-referrer-when-downgrade"
-                    title="TechEagles Office Location"
-                    className={`${isDarkMode ? 'grayscale invert' : ''}`}
-                  ></iframe>
-                </div>
-                <p className={`mt-4 ${isDarkMode ? 'text-gray-400' : 'text-gray-600'}`}>
-                  Visit our office in the heart of San Francisco's tech district. Please schedule an appointment before visiting.
-                </p>
-              </div>
-              
-              {/* FAQ */}
+              {/* Removed map as requested; keeping only FAQ */}
               <div>
                 <h3 className={`text-xl font-semibold mb-6 ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>Frequently Asked Questions</h3>
                 <div className="space-y-4">
@@ -398,7 +377,7 @@ const ContactPage = ({ isDarkMode }) => {
               Email Us Now
             </a>
             <a 
-              href="tel:+15551234567" 
+              href="tel:9313924875" 
               className="bg-transparent border border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white/10 transition-all duration-300"
             >
               Call Us Now
