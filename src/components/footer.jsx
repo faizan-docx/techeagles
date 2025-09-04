@@ -2,6 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import EagleLogo from './eagleLogo';
+import logo from '/logo.jpeg';
 
 const Footer = ({ isDarkMode }) => {
   // Animation variants
@@ -132,7 +133,7 @@ const Footer = ({ isDarkMode }) => {
                   transition={{ duration: 3, repeat: Infinity, ease: "linear" }}
                 />
                 <div className="relative z-10">
-                  <EagleLogo />
+                  <img src={logo} alt="Tech Eagles Logo" className="w-6 h-6 object-contain" />
                 </div>
               </motion.div>
               <motion.span 

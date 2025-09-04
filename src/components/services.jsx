@@ -20,6 +20,7 @@ import {
   Play,
   Pause
 } from 'lucide-react';
+import CardSpotlight from './ui/card-spotlight';
 
 const ServicesPage = ({ isDarkMode }) => {
   const [activeService, setActiveService] = useState(null);
@@ -290,10 +291,10 @@ const ServicesPage = ({ isDarkMode }) => {
                 <motion.div
                   key={service.id}
                   variants={itemVariants}
-                  className={`rounded-xl overflow-hidden shadow-lg ${isDarkMode ? 'bg-gray-800' : 'bg-white'} transition-all duration-300 hover:-translate-y-2 cursor-pointer`}
+                  className={`cursor-pointer`}
                   onClick={() => openServiceDetail(service)}
                 >
-                  <div className="p-6 text-center">
+                  <CardSpotlight className={`p-6 rounded-xl text-center shadow-lg ${isDarkMode ? 'bg-gray-800' : 'bg-white'} transition-all duration-300 hover:-translate-y-2`}>
                     <div className={`w-16 h-16 rounded-lg ${isDarkMode ? 'bg-violet-900/30' : 'bg-violet-100'} flex items-center justify-center mx-auto mb-4`}>
                       <IconComponent className={`w-8 h-8 ${isDarkMode ? 'text-cyan-400' : 'text-violet-600'}`} />
                     </div>
@@ -309,7 +310,7 @@ const ServicesPage = ({ isDarkMode }) => {
                       Learn more
                       <ArrowRight className="w-4 h-4 ml-1" />
                     </button>
-                  </div>
+                  </CardSpotlight>
                 </motion.div>
               );
             })}

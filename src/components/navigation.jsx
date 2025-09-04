@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Sun, Moon, Menu, X, ChevronDown, Sparkles } from 'lucide-react';
+import { Sun, Moon, Menu, X, ChevronDown } from 'lucide-react';
 import { Link, useLocation } from 'react-router-dom';
 import EagleLogo from './eagleLogo';
 
@@ -124,14 +124,7 @@ const Navigation = ({ isDarkMode, setIsDarkMode }) => {
                 <EagleLogo />
               </div>
               
-              {/* Sparkle Effect */}
-              <motion.div
-                className="absolute -top-1 -right-1 text-yellow-400"
-                animate={{ rotate: 360 }}
-                transition={{ duration: 2, repeat: Infinity, ease: "linear" }}
-              >
-                <Sparkles className="w-3 h-3" />
-              </motion.div>
+              
             </motion.div>
             
             <div className="flex flex-col">
