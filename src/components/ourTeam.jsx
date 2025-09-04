@@ -84,22 +84,7 @@ const OurTeamPage = ({ isDarkMode }) => {
       },
       funFact: 'Faizan loves exploring new web technologies and often experiments with the latest frameworks.'
     },
-    {
-      id: 5,
-      name: 'Shreya Goel',
-      role: 'UI/UX & Content Lead',
-      image: '/team-images/shreya_goel.png',
-      bio: 'Creating beautiful user experiences and compelling content that engages and inspires.',
-      fullBio: 'Shreya leads both UI/UX design and content creation at TechEagles. With a keen eye for design and excellent writing skills, Shreya ensures our products are not only functional but also visually appealing and our content resonates with our audience.',
-      skills: ['UI/UX Design', 'Content Writing', 'Figma', 'User Research'],
-      social: {
-        linkedin: 'https://www.linkedin.com/in/shreya-goel-8b870928a/',
-        instagram: 'https://instagram.com/iamshreyagoel_',
-        github: 'https://github.com/shreya1410goel',
-        email: 'shreyag1410@gmail.com '
-      },
-      funFact: 'Shreya is an avid reader and often draws inspiration from literature for her design work.'
-    },
+    
     {
       id: 6,
       name: 'Divyansh Mogra',
@@ -181,6 +166,22 @@ const OurTeamPage = ({ isDarkMode }) => {
       funFact: 'Sukhmani enjoys creating detailed project timelines and finding ways to improve team efficiency.'
     },
     {
+      id: 10,
+      name: 'Ananya Sinha',
+      role: 'Testing Lead',
+      image: '/team-images/ananya_sinha.png',
+      bio: 'Ensuring product quality through rigorous testing and QA processes.',
+      fullBio: 'Ananya leads testing initiatives, defining test strategies and implementing robust QA processes to ensure reliability and performance across all deliverables.',
+      skills: ['Manual Testing', 'Automation', 'Test Strategy', 'QA Processes'],
+      social: {
+        linkedin: 'https://www.linkedin.com/in/ananya-sinha-87407b286/',
+        instagram: 'https://instagram.com',
+        github: 'https://github.com',
+        email: 'anany08a@gmail.com'
+      },
+      funFact: 'Ananya enjoys building automation suites and improving test coverage.'
+    },
+    {
       id: 11,
       name: 'Pakhi Sharma',
       role: 'Training Lead',
@@ -195,6 +196,22 @@ const OurTeamPage = ({ isDarkMode }) => {
         email: 'paksh2004@gmail.com'
       },
       funFact: 'Pakhi loves creating interactive learning experiences and often incorporates gamification into training programs.'
+    },
+    {
+      id: 12,
+      name: 'Shreya Goel',
+      role: 'UI/UX & Content Lead',
+      image: '/team-images/shreya_goel.png',
+      bio: 'Creating beautiful user experiences and compelling content that engages and inspires.',
+      fullBio: 'Shreya leads both UI/UX design and content creation at TechEagles. With a keen eye for design and excellent writing skills, Shreya ensures our products are not only functional but also visually appealing and our content resonates with our audience.',
+      skills: ['UI/UX Design', 'Content Writing', 'Figma', 'User Research'],
+      social: {
+        linkedin: 'https://www.linkedin.com/in/shreya-goel-8b870928a/',
+        instagram: 'https://instagram.com/iamshreyagoel_',
+        github: 'https://github.com/shreya1410goel',
+        email: 'shreyag1410@gmail.com '
+      },
+      funFact: 'Shreya is an avid reader and often draws inspiration from literature for her design work.'
     },
     {
       id: 12,
@@ -264,7 +281,7 @@ const OurTeamPage = ({ isDarkMode }) => {
 
   // Team stats
   const teamStats = [
-    { icon: Users, value: '15', label: 'Team Members' },
+    { icon: Users, value: '16', label: 'Team Members' },
     { icon: Award, value: '10+', label: 'Years Combined Experience' },
     { icon: Calendar, value: '2025', label: 'Founded In' },
     { icon: MapPin, value: '1', label: 'Countries' },
