@@ -123,7 +123,7 @@ const Navigation = ({ isDarkMode, setIsDarkMode }) => {
               <div className="relative z-10">
                 <img src="/logo.png" alt="TechEagles logo" className="w-8 h-8 rounded object-cover" />
               </div>
-              
+               
               
             </motion.div>
             
