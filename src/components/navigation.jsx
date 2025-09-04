@@ -148,7 +148,7 @@ const Navigation = ({ isDarkMode, setIsDarkMode }) => {
               </motion.span>
             </div>
           </Link>
-
+          
           {/* Enhanced Desktop Navigation */}
           <div className="hidden lg:flex items-center space-x-1">
             {navItems.map((item) => (

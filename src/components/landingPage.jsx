@@ -2,6 +2,8 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { useNavigate } from 'react-router-dom';
 import { MacbookScroll } from './ui/macbook-scroll';
+import { BackgroundLines } from './ui/background-lines';
+import TechGridBackground from './ui/tech-grid';
  
 
 const LandingPage = ({ isDarkMode }) => {
@@ -90,7 +92,9 @@ const LandingPage = ({ isDarkMode }) => {
   };
 
   return (
-    <div className={`min-h-screen flex flex-col items-center justify-between relative overflow-hidden ${isDarkMode ? 'bg-gray-900' : 'bg-gray-50'}`}>
+    <div className={`min-h-screen flex flex-col items-center justify-between relative overflow-hidden ${isDarkMode ? 'bg-gray-950' : 'bg-white'}`}>
+      {/* Tech grid background */}
+      <TechGridBackground dark={isDarkMode} />
       {/* Animated Background Elements */}
       <motion.div
         className="absolute top-20 left-20 w-32 h-32 rounded-full opacity-10 blur-xl"
@@ -141,12 +145,13 @@ const LandingPage = ({ isDarkMode }) => {
       />
 
       <div className="w-full flex-1 flex flex-col items-center justify-center relative z-10 px-4">
-        <motion.div 
-          className="w-full max-w-4xl flex flex-col items-center text-center space-y-6 mt-16 md:mt-24"
-          variants={containerVariants}
-          initial="hidden"
-          animate="visible"
-        >
+        <BackgroundLines className="relative w-full flex flex-col items-center justify-center px-4 py-10 md:py-16 overflow-hidden">
+          <motion.div 
+            className="relative z-10 w-full max-w-4xl flex flex-col items-center text-center space-y-6"
+            variants={containerVariants}
+            initial="hidden"
+            animate="visible"
+          >
         {/* Enhanced Title with Letter Animation (two lines) */}
         <motion.div className="mb-6 leading-tight">
           {[
@@ -247,17 +252,21 @@ const LandingPage = ({ isDarkMode }) => {
           animate="float"
           transition={{ delay: 2.5, duration: 5 }}
         />
-        </motion.div>
+          </motion.div>
+        </BackgroundLines>
       </div>
 
-      <div className="w-full flex justify-center pb-8">
-        <MacbookScroll 
-          src="/linear.webp" 
-          showGradient={false}
-          screenTitle="See Your Ideas Come Alive"
-          screenSubtitle=""
-          screenDescription=""
-        />
+      <div className="w-full flex justify-center pb-8 relative">
+        <BackgroundLines className="absolute inset-0 overflow-hidden" />
+        <div className="relative z-10 w-full flex justify-center">
+          <MacbookScroll 
+            src="/linear.webp" 
+            showGradient={false}
+            screenTitle="See Your Ideas Come Alive"
+            screenSubtitle=""
+            screenDescription=""
+          />
+        </div>
       </div>
     </div>
   );
