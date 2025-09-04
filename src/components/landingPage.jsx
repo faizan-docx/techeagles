@@ -142,7 +142,7 @@ const LandingPage = ({ isDarkMode }) => {
       />
 
       <div className="w-full flex-1 flex flex-col items-center justify-center relative z-10 px-4">
-        <BackgroundLines className="relative w-full flex flex-col items-center justify-center px-4 py-10 md:py-16 overflow-hidden">
+        <BackgroundLines className="relative w-full flex flex-col items-center justify-center px-4 pt-48 pb-10 md:pt-0 md:py-16 overflow-hidden">
           <motion.div 
             className="relative z-10 w-full max-w-4xl flex flex-col items-center text-center space-y-6"
             variants={containerVariants}

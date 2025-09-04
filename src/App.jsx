@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useLayoutEffect } from 'react';
 import { Routes, Route, useLocation } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import LandingPage from './components/landingPage';
@@ -15,6 +15,11 @@ import Footer from './components/footer';
 function App() {
   const [isDarkMode, setIsDarkMode] = useState(true);
   const location = useLocation();
+
+  // Ensure on first load/refresh we start at the top
+  useLayoutEffect(() => {
+    window.scrollTo({ top: 0, left: 0, behavior: 'auto' });
+  }, []);
 
   useEffect(() => {
     if (isDarkMode) {
