@@ -69,7 +69,7 @@ const AboutPage = ({ isDarkMode }) => {
   // Timeline data
   const timeline = [
     {
-      year: '2018',
+      year: '2025',
       title: 'Founded',
       description: 'TechEagles was established with a vision to revolutionize digital solutions.',
       icon: Clock
@@ -149,7 +149,7 @@ const AboutPage = ({ isDarkMode }) => {
               <h2 className={`text-3xl font-bold mb-6 ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>Our Story</h2>
               <div className={`space-y-4 ${isDarkMode ? 'text-gray-300' : 'text-gray-600'}`}>
                 <p>
-                  Founded in 2018, TechEagles began with a simple mission: to help businesses harness the power of technology to solve complex challenges and achieve their goals.
+                  Founded in 2025, TechEagles began with a simple mission: to help businesses harness the power of technology to solve complex challenges and achieve their goals.
                 </p>
                 <p>
                   What started as a small team of developers has grown into a multidisciplinary agency with expertise in AI, cloud computing, cybersecurity, and user experience design.
