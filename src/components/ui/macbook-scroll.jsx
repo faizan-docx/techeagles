@@ -14,13 +14,11 @@ export const MacbookScroll = ({ src = "/linear.webp", showGradient = false, titl
     }
   }, []);
 
-  // Lighter animation ranges to reduce lag
-  const scaleX = useTransform(scrollYProgress, [0, 0.25], [1.05, isMobile ? 1 : 1.15]);
-  const scaleY = useTransform(scrollYProgress, [0, 0.25], [0.85, isMobile ? 1 : 1.1]);
-  const translate = useTransform(scrollYProgress, [0, 1], [0, 600]);
-  const rotate = useTransform(scrollYProgress, [0.05, 0.15], [-12, 0]);
-  const textTransform = useTransform(scrollYProgress, [0, 0.3], [0, 100]);
-  const textOpacity = useTransform(scrollYProgress, [0, 0.2], [1, 0]);
+  // Restore animation ranges prior to last change
+  const scaleX = useTransform(scrollYProgress, [0, 0.4], [1.15, isMobile ? 1 : 1.4]);
+  const scaleY = useTransform(scrollYProgress, [0, 0.4], [0.65, isMobile ? 1 : 1.4]);
+  const translate = useTransform(scrollYProgress, [0, 1], [0, 1300]);
+  const rotate = useTransform(scrollYProgress, [0.1, 0.15, 0.4], [-26, -26, 0]);
 
   return (
     <div ref={ref} className="flex min-h-[160vh] md:min-h-[140vh] shrink-0 transform flex-col items-center justify-start py-10 md:py-40 [perspective:800px]">
@@ -126,12 +124,8 @@ export const SpeakerGrid = () => (
   <div className="mt-2 flex h-40 gap-[2px] px-[0.5px]" style={{ backgroundImage: "radial-gradient(circle, #08080A 0.5px, transparent 0.5px)", backgroundSize: "3px 3px" }}></div>
 );
 
-const AceternityLogo = () => (
-  <svg width="66" height="65" viewBox="0 0 66 65" fill="none" xmlns="http://www.w3.org/2000/svg" className="h-3 w-3 text-white">
-    <path d="M8 8.05571C8 8.05571 54.9009 18.1782 57.8687 30.062C60.8365 41.9458 9.05432 57.4696 9.05432 57.4696" stroke="currentColor" strokeWidth="15" strokeMiterlimit="3.86874" strokeLinecap="round" />
-  </svg>
-);
-
 export default MacbookScroll;
+
+
 
 

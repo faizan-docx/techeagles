@@ -639,21 +639,12 @@ const OurTeamPage = ({ isDarkMode }) => {
         <div className="absolute top-0 right-0 -translate-y-1/2 translate-x-1/2 bg-white/10 w-96 h-96 rounded-full blur-3xl" />
         
         <div className="relative z-10 max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-            Join Our Flock
-          </h2>
+          
           <p className="text-xl text-cyan-100 mb-10 max-w-2xl mx-auto">
             We're always looking for talented individuals who are passionate about technology and innovation. 
             If you're ready to take your career to new heights, we'd love to hear from you.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-white text-violet-700 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300">
-              View Open Positions
-            </button>
-            <button className="bg-transparent border border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white/10 transition-all duration-300">
-              Submit Your Resume
-            </button>
-          </div>
+         
         </div>
       </section>
     </div>

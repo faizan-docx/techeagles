@@ -2,6 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { useNavigate } from 'react-router-dom';
 import { MacbookScroll } from './ui/macbook-scroll';
+ 
 
 const LandingPage = ({ isDarkMode }) => {
   const navigate = useNavigate();

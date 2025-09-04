@@ -225,8 +225,8 @@ const AboutPage = ({ isDarkMode }) => {
           </div>
 
           <div className="relative">
-            {/* Timeline line */}
-            <div className="absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-gradient-to-b from-violet-600 to-cyan-500"></div>
+            {/* Timeline line (hidden on mobile) */}
+            <div className="absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-gradient-to-b from-violet-600 to-cyan-500 hidden md:block"></div>
             
             {/* Timeline items */}
             <div className="space-y-12">
@@ -239,9 +239,9 @@ const AboutPage = ({ isDarkMode }) => {
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6, delay: index * 0.1 }}
                     viewport={{ once: true }}
-                    className={`relative flex ${index % 2 === 0 ? 'flex-row' : 'flex-row-reverse'} items-center`}
+                    className={`relative flex flex-col ${index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'} items-center md:items-start`}
                   >
-                    <div className="w-1/2 pr-8 pl-8">
+                    <div className="w-full md:w-1/2 md:pr-8 md:pl-8">
                       <div className={`p-6 rounded-xl shadow-lg ${isDarkMode ? 'bg-gray-800' : 'bg-white'}`}>
                         <div className="flex items-center mb-4">
                           <div className={`w-10 h-10 rounded-full ${isDarkMode ? 'bg-violet-900/30' : 'bg-violet-100'} flex items-center justify-center mr-3`}>
@@ -253,8 +253,9 @@ const AboutPage = ({ isDarkMode }) => {
                         <p className={isDarkMode ? 'text-gray-300' : 'text-gray-600'}>{item.description}</p>
                       </div>
                     </div>
-                    <div className="absolute left-1/2 transform -translate-x-1/2 w-6 h-6 rounded-full bg-gradient-to-r from-violet-600 to-cyan-500 border-4 border-white shadow"></div>
-                    <div className="w-1/2"></div>
+                    {/* Center dot hidden on mobile */}
+                    <div className="absolute left-1/2 transform -translate-x-1/2 w-6 h-6 rounded-full bg-gradient-to-r from-violet-600 to-cyan-500 border-4 border-white shadow hidden md:block"></div>
+                    <div className="hidden md:block md:w-1/2"></div>
                   </motion.div>
                 );
               })}
@@ -264,59 +265,7 @@ const AboutPage = ({ isDarkMode }) => {
       </section>
 
       {/* Team Section */}
-      <section className={`py-16 ${isDarkMode ? 'bg-gray-900/30' : 'bg-white'}`}>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className={`text-3xl font-bold mb-4 ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>Meet Our Team</h2>
-            <p className={`text-xl max-w-3xl mx-auto ${isDarkMode ? 'text-gray-400' : 'text-gray-600'}`}>
-              The brilliant minds behind our innovative solutions
-            </p>
-          </div>
-
-          <motion.div
-            variants={containerVariants}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-            className="grid md:grid-cols-2 lg:grid-cols-4 gap-8"
-          >
-            {teamMembers.map((member, index) => (
-              <motion.div
-                key={index}
-                variants={itemVariants}
-                className={`rounded-xl overflow-hidden shadow-lg ${isDarkMode ? 'bg-gray-800' : 'bg-white'} transition-transform duration-300 hover:-translate-y-2`}
-              >
-                <img 
-                  src={member.image} 
-                  alt={member.name} 
-                  className="w-full h-56 object-cover"
-                />
-                <div className="p-6">
-                  <h3 className={`text-xl font-semibold mb-1 ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>{member.name}</h3>
-                  <p className={`mb-3 ${isDarkMode ? 'text-cyan-400' : 'text-violet-600'}`}>{member.role}</p>
-                  <p className={isDarkMode ? 'text-gray-300' : 'text-gray-600'}>{member.bio}</p>
-                </div>
-              </motion.div>
-            ))}
-          </motion.div>
-
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.4 }}
-            viewport={{ once: true }}
-            className="text-center mt-16"
-          >
-            <h3 className={`text-2xl font-semibold mb-6 ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>Join Our Flock</h3>
-            <p className={`max-w-2xl mx-auto mb-8 ${isDarkMode ? 'text-gray-300' : 'text-gray-600'}`}>
-              We're always looking for talented individuals who are passionate about technology and innovation.
-            </p>
-            <button className="bg-gradient-to-r from-violet-600 to-cyan-500 text-white px-6 py-3 rounded-lg font-semibold hover:shadow-lg transition-all duration-300">
-              View Open Positions
-            </button>
-          </motion.div>
-        </div>
-      </section>
+      {/* Removed as requested */}
     </div>
   );
 };
