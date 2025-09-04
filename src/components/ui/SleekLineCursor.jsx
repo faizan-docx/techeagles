@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 
 const SleekLineCursor = ({
   friction = 0.5,
@@ -13,6 +13,21 @@ const SleekLineCursor = ({
   const waveRef = useRef(null);
   const posRef = useRef({ x: 0, y: 0 });
   const linesRef = useRef([]);
+  const [enabled, setEnabled] = useState(false);
+
+  // Enable only on non-coarse pointers (desktops/laptops)
+  useEffect(() => {
+    if (typeof window === 'undefined') return;
+    const mq = window.matchMedia('(pointer: coarse)');
+    const update = () => setEnabled(!mq.matches);
+    update();
+    if (mq.addEventListener) mq.addEventListener('change', update);
+    else mq.addListener(update);
+    return () => {
+      if (mq.removeEventListener) mq.removeEventListener('change', update);
+      else mq.removeListener(update);
+    };
+  }, []);
 
   class Wave {
     constructor({ phase = 0, offset = 285, frequency = 0.0015, amplitude = 85 } = {}) {
@@ -90,6 +105,7 @@ const SleekLineCursor = ({
   }
 
   useEffect(() => {
+    if (!enabled) return;
     const canvas = canvasRef.current;
     if (!canvas) return;
     const ctx = canvas.getContext('2d');
@@ -172,11 +188,10 @@ const SleekLineCursor = ({
       window.removeEventListener('focus', handleFocus);
       window.removeEventListener('blur', handleBlur);
     };
-  }, [dampening, friction, size, tension, trails]);
+  }, [enabled, dampening, friction, size, tension, trails]);
 
-  return (
-    <canvas ref={canvasRef} className={`pointer-events-none fixed inset-0 z-50 ${className}`} />
-  );
+  if (!enabled) return null;
+  return <canvas ref={canvasRef} className={`pointer-events-none fixed inset-0 z-50 ${className}`} />;
 };
 
 export default SleekLineCursor;
