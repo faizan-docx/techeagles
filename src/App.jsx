@@ -11,6 +11,7 @@ import TermsOfService from './components/termsOfService';
 import PrivacyPolicy from './components/privacyPolicy';
 import Navigation from './components/navigation';
 import Footer from './components/footer';
+import SleekLineCursor from './components/ui/SleekLineCursor';
 
 function App() {
   const [isDarkMode, setIsDarkMode] = useState(true);
@@ -56,6 +57,7 @@ function App() {
 
   return (
     <div className={`min-h-screen relative ${isDarkMode ? 'dark bg-gray-950' : 'bg-gray-50'}`}>
+      <SleekLineCursor trails={18} size={45} friction={0.52} dampening={0.22} tension={0.975} />
       {/* Global Animated Background Elements */}
       <div className="fixed inset-0 pointer-events-none overflow-hidden">
         {/* Floating Orbs */}
