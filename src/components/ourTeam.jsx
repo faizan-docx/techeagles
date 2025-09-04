@@ -53,7 +53,7 @@ const OurTeamPage = ({ isDarkMode }) => {
     {
       id: 3,
       name: 'Arpit Parashar',
-      role: 'Growth and Expansion Lead',
+      role: 'Growth and Expansion Chief',
       image: '/team-images/Arpit_Parashar.png',
       bio: 'Driving growth initiatives and expanding TechEagles reach across new markets and opportunities.',
       fullBio: 'Arpit leads the Growth and Expansion initiatives at TechEagles, focusing on scaling the organization and identifying new opportunities for development. With strategic thinking and market analysis skills, Arpit helps TechEagles reach new heights and expand its impact.',
