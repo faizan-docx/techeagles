@@ -146,31 +146,38 @@ const LandingPage = ({ isDarkMode }) => {
           initial="hidden"
           animate="visible"
         >
-        {/* Enhanced Title with Letter Animation */}
-        <motion.div className="mb-6">
-          {Array.from("Building Digital Solutions that Drive Growth").map((letter, index) => (
-            <motion.span
-              key={index}
-              className={`inline-block text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold ${
-                isDarkMode ? 'text-white' : 'text-gray-900'
-              }`}
-              variants={{
-                hidden: { y: 50, opacity: 0, rotateX: -90 },
-                visible: {
-                  y: 0,
-                  opacity: 1,
-                  rotateX: 0,
-                  transition: {
-                    delay: index * 0.05,
-                    duration: 0.5,
-                    type: "spring",
-                    stiffness: 100
-                  }
-                }
-              }}
-            >
-              {letter === ' ' ? '\u00A0' : letter}
-            </motion.span>
+        {/* Enhanced Title with Letter Animation (two lines) */}
+        <motion.div className="mb-6 leading-tight">
+          {[
+            'Building Digital Solutions',
+            'that Drive Growth'
+          ].map((line, lineIdx) => (
+            <div key={lineIdx} className={`${lineIdx === 1 ? 'mt-1 md:mt-2' : ''}`}>
+              {Array.from(line).map((letter, index) => (
+                <motion.span
+                  key={`${lineIdx}-${index}`}
+                  className={`inline-block text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold ${
+                    isDarkMode ? 'text-white' : 'text-gray-900'
+                  }`}
+                  variants={{
+                    hidden: { y: 50, opacity: 0, rotateX: -90 },
+                    visible: {
+                      y: 0,
+                      opacity: 1,
+                      rotateX: 0,
+                      transition: {
+                        delay: index * 0.05 + lineIdx * 0.4,
+                        duration: 0.5,
+                        type: 'spring',
+                        stiffness: 100
+                      }
+                    }
+                  }}
+                >
+                  {letter === ' ' ? '\u00A0' : letter}
+                </motion.span>
+              ))}
+            </div>
           ))}
         </motion.div>
         
