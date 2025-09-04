@@ -61,10 +61,10 @@ const OurTeamPage = ({ isDarkMode }) => {
       fullBio: 'Harshit leads the Vision team, responsible for defining the long-term strategic direction of TechEagles. With a forward-thinking approach and deep understanding of technology trends, Harshit helps shape the organization\'s goals and future initiatives.',
       skills: ['Strategic Planning', 'Vision Development', 'Technology Trends', 'Innovation'],
       social: {
-        linkedin: 'https://linkedin.com',
-        instagram: 'https://instagram.com',
-        github: 'https://github.com',
-        email: 'harshit@techeagles.com'
+        linkedin: 'https://www.linkedin.com/in/harshit-mehra-185b35217/',
+        instagram: 'https://www.instagram.com/harshit.mehra_27/',
+        github: 'https://github.com/Harshitmehra-270709',
+        email: 'Mehra.harshit27@gmail.com'
       },
       funFact: 'Harshit enjoys researching emerging technologies and their potential impact on society.'
     },
