@@ -235,45 +235,7 @@ const ProjectsPage = ({ isDarkMode }) => {
         </div>
       </section>
 
-      {/* Filters Section */}
-      <section className={`py-12 ${isDarkMode ? 'bg-gray-950' : 'bg-gray-50'}`}>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-8">
-            <h2 className={`text-2xl font-semibold mb-4 ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>Filter Projects</h2>
-          </div>
-          
-          <motion.div
-            variants={containerVariants}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-            className="flex flex-wrap justify-center gap-4"
-          >
-            {categories.map((category) => {
-              const IconComponent = category.icon;
-              const isActive = activeFilter === category.id;
-              
-              return (
-                <motion.button
-                  key={category.id}
-                  variants={itemVariants}
-                  onClick={() => setActiveFilter(category.id)}
-                  className={`flex items-center px-5 py-3 rounded-full transition-all duration-300 ${
-                    isActive 
-                      ? 'bg-gradient-to-r from-violet-600 to-cyan-500 text-white shadow-lg' 
-                      : isDarkMode 
-                        ? 'bg-gray-800 text-gray-300 hover:bg-gray-700' 
-                        : 'bg-white text-gray-700 hover:bg-gray-100 shadow-md'
-                  }`}
-                >
-                  <IconComponent className="w-5 h-5 mr-2" />
-                  {category.name}
-                </motion.button>
-              );
-            })}
-          </motion.div>
-        </div>
-      </section>
+
 
       {/* Projects Grid */}
       <section className={`py-16 ${isDarkMode ? 'bg-gray-900/30' : 'bg-white'}`}>

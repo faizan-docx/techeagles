@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
+import { CardContainer, CardBody, CardItem } from './ui/3d-card';
 import { 
   Users, 
   Linkedin, 
@@ -366,102 +367,69 @@ const OurTeamPage = ({ isDarkMode }) => {
             className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8"
           >
             {teamMembers.slice(0, 3).map((member) => (
-              <motion.div
-                key={member.id}
-                variants={itemVariants}
-                className={`rounded-xl overflow-hidden shadow-lg ${isDarkMode ? 'bg-gray-800' : 'bg-white'} transition-all duration-300 hover:-translate-y-2`}
-              >
-                <div className="relative group">
-                  <img 
-                    src={member.image} 
-                    alt={member.name} 
-                    className="w-full h-64 object-cover"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
-                    <div className="p-4 w-full">
-                      <div className="flex justify-center space-x-3">
-                        <a 
-                          href={member.social.linkedin} 
-                          className={`w-8 h-8 rounded-full flex items-center justify-center ${isDarkMode ? 'bg-gray-800 text-cyan-400' : 'bg-white text-violet-600'} hover:scale-110 transition-transform`}
-                        >
-                          <Linkedin className="w-4 h-4" />
-                        </a>
-                        <a 
-                          href={member.social.github} 
-                          className={`w-8 h-8 rounded-full flex items-center justify-center ${isDarkMode ? 'bg-gray-800 text-cyan-400' : 'bg-white text-violet-600'} hover:scale-110 transition-transform`}
-                        >
-                          <Github className="w-4 h-4" />
-                        </a>
-                        <a 
-                          href={member.social.twitter} 
-                          className={`w-8 h-8 rounded-full flex items-center justify-center ${isDarkMode ? 'bg-gray-800 text-cyan-400' : 'bg-white text-violet-600'} hover:scale-110 transition-transform`}
-                        >
-                          <Twitter className="w-4 h-4" />
-                        </a>
-                        <a 
-                          href={`mailto:${member.social.email}`} 
-                          className={`w-8 h-8 rounded-full flex items-center justify-center ${isDarkMode ? 'bg-gray-800 text-cyan-400' : 'bg-white text-violet-600'} hover:scale-110 transition-transform`}
-                        >
-                          <Mail className="w-4 h-4" />
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                
-                <div className="p-6 text-center">
-                  <h3 className={`text-xl font-semibold mb-1 ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>{member.name}</h3>
-                  <p className={`mb-3 ${isDarkMode ? 'text-cyan-400' : 'text-violet-600'}`}>{member.role}</p>
-                  <p className={`text-sm mb-4 ${isDarkMode ? 'text-gray-300' : 'text-gray-600'}`}>{member.bio}</p>
-                  
-                  <button
-                    onClick={() => toggleExpand(member.id)}
-                    className={`w-full py-2 rounded-lg flex items-center justify-center ${isDarkMode ? 'bg-gray-700 text-cyan-400 hover:bg-gray-600' : 'bg-gray-100 text-violet-600 hover:bg-gray-200'} transition-colors`}
-                  >
-                    {expandedMember === member.id ? (
-                      <>
-                        <span className="mr-1">Less</span>
-                        <ChevronUp className="w-4 h-4" />
-                      </>
-                    ) : (
-                      <>
-                        <span className="mr-1">More</span>
-                        <ChevronDown className="w-4 h-4" />
-                      </>
-                    )}
-                  </button>
-                  
-                  {expandedMember === member.id && (
-                    <motion.div
-                      initial={{ opacity: 0, height: 0 }}
-                      animate={{ opacity: 1, height: 'auto' }}
-                      exit={{ opacity: 0, height: 0 }}
-                      className="mt-4"
-                    >
-                      <p className={`text-sm mb-4 ${isDarkMode ? 'text-gray-300' : 'text-gray-600'}`}>{member.fullBio}</p>
-                      
-                      <div className="mb-4">
-                        <h4 className={`font-semibold mb-2 ${isDarkMode ? 'text-cyan-400' : 'text-violet-600'}`}>Skills</h4>
-                        <div className="flex flex-wrap gap-2 justify-center">
-                          {member.skills.map((skill, index) => (
-                            <span 
-                              key={index}
-                              className={`px-3 py-1 rounded-full text-xs ${isDarkMode ? 'bg-violet-900/30 text-cyan-400' : 'bg-violet-100 text-violet-700'}`}
-                            >
-                              {skill}
-                            </span>
-                          ))}
+              <CardContainer key={member.id} className="w-full" containerClassName="py-0">
+                <CardBody className={`rounded-xl overflow-hidden shadow-lg ${isDarkMode ? 'bg-gray-800' : 'bg-white'} p-0`}>
+                  <CardItem translateZ={60} className="relative group block">
+                    <img src={member.image} alt={member.name} className="w-full h-64 object-cover" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
+                      <div className="p-4 w-full">
+                        <div className="flex justify-center space-x-3">
+                          <a href={member.social.linkedin} className={`w-8 h-8 rounded-full flex items-center justify-center ${isDarkMode ? 'bg-gray-800 text-cyan-400' : 'bg-white text-violet-600'} hover:scale-110 transition-transform`}>
+                            <Linkedin className="w-4 h-4" />
+                          </a>
+                          <a href={member.social.github} className={`w-8 h-8 rounded-full flex items-center justify-center ${isDarkMode ? 'bg-gray-800 text-cyan-400' : 'bg-white text-violet-600'} hover:scale-110 transition-transform`}>
+                            <Github className="w-4 h-4" />
+                          </a>
+                          <a href={member.social.twitter} className={`w-8 h-8 rounded-full flex items-center justify-center ${isDarkMode ? 'bg-gray-800 text-cyan-400' : 'bg-white text-violet-600'} hover:scale-110 transition-transform`}>
+                            <Twitter className="w-4 h-4" />
+                          </a>
+                          <a href={`mailto:${member.social.email}`} className={`w-8 h-8 rounded-full flex items-center justify-center ${isDarkMode ? 'bg-gray-800 text-cyan-400' : 'bg-white text-violet-600'} hover:scale-110 transition-transform`}>
+                            <Mail className="w-4 h-4" />
+                          </a>
                         </div>
                       </div>
-                      
-                      <div>
-                        <h4 className={`font-semibold mb-2 ${isDarkMode ? 'text-cyan-400' : 'text-violet-600'}`}>Fun Fact</h4>
-                        <p className={`text-sm ${isDarkMode ? 'text-gray-300' : 'text-gray-600'}`}>{member.funFact}</p>
-                      </div>
-                    </motion.div>
-                  )}
-                </div>
-              </motion.div>
+                    </div>
+                  </CardItem>
+                  <div className="p-6 text-center">
+                    <CardItem translateZ={40} className={`text-xl font-semibold mb-1 ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>{member.name}</CardItem>
+                    <CardItem translateZ={30} className={`mb-3 ${isDarkMode ? 'text-cyan-400' : 'text-violet-600'}`}>{member.role}</CardItem>
+                    <CardItem translateZ={20} className={`text-sm mb-4 ${isDarkMode ? 'text-gray-300' : 'text-gray-600'}`}>{member.bio}</CardItem>
+                    <CardItem translateZ={20} as="button"
+                      onClick={() => toggleExpand(member.id)}
+                      className={`w-full py-2 rounded-lg flex items-center justify-center ${isDarkMode ? 'bg-gray-700 text-cyan-400 hover:bg-gray-600' : 'bg-gray-100 text-violet-600 hover:bg-gray-200'} transition-colors`}
+                    >
+                      {expandedMember === member.id ? (
+                        <>
+                          <span className="mr-1">Less</span>
+                          <ChevronUp className="w-4 h-4" />
+                        </>
+                      ) : (
+                        <>
+                          <span className="mr-1">More</span>
+                          <ChevronDown className="w-4 h-4" />
+                        </>
+                      )}
+                    </CardItem>
+                    {expandedMember === member.id && (
+                      <motion.div initial={{ opacity: 0, height: 0 }} animate={{ opacity: 1, height: 'auto' }} exit={{ opacity: 0, height: 0 }} className="mt-4">
+                        <p className={`text-sm mb-4 ${isDarkMode ? 'text-gray-300' : 'text-gray-600'}`}>{member.fullBio}</p>
+                        <div className="mb-4">
+                          <h4 className={`font-semibold mb-2 ${isDarkMode ? 'text-cyan-400' : 'text-violet-600'}`}>Skills</h4>
+                          <div className="flex flex-wrap gap-2 justify-center">
+                            {member.skills.map((skill, index) => (
+                              <span key={index} className={`px-3 py-1 rounded-full text-xs ${isDarkMode ? 'bg-violet-900/30 text-cyan-400' : 'bg-violet-100 text-violet-700'}`}>{skill}</span>
+                            ))}
+                          </div>
+                        </div>
+                        <div>
+                          <h4 className={`font-semibold mb-2 ${isDarkMode ? 'text-cyan-400' : 'text-violet-600'}`}>Fun Fact</h4>
+                          <p className={`text-sm ${isDarkMode ? 'text-gray-300' : 'text-gray-600'}`}>{member.funFact}</p>
+                        </div>
+                      </motion.div>
+                    )}
+                  </div>
+                </CardBody>
+              </CardContainer>
             ))}
           </motion.div>
 
@@ -474,102 +442,69 @@ const OurTeamPage = ({ isDarkMode }) => {
             className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8"
           >
             {teamMembers.slice(3).map((member) => (
-              <motion.div
-                key={member.id}
-                variants={itemVariants}
-                className={`rounded-xl overflow-hidden shadow-lg ${isDarkMode ? 'bg-gray-800' : 'bg-white'} transition-all duration-300 hover:-translate-y-2`}
-              >
-                <div className="relative group">
-                  <img 
-                    src={member.image} 
-                    alt={member.name} 
-                    className="w-full h-64 object-cover"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
-                    <div className="p-4 w-full">
-                      <div className="flex justify-center space-x-3">
-                        <a 
-                          href={member.social.linkedin} 
-                          className={`w-8 h-8 rounded-full flex items-center justify-center ${isDarkMode ? 'bg-gray-800 text-cyan-400' : 'bg-white text-violet-600'} hover:scale-110 transition-transform`}
-                        >
-                          <Linkedin className="w-4 h-4" />
-                        </a>
-                        <a 
-                          href={member.social.github} 
-                          className={`w-8 h-8 rounded-full flex items-center justify-center ${isDarkMode ? 'bg-gray-800 text-cyan-400' : 'bg-white text-violet-600'} hover:scale-110 transition-transform`}
-                        >
-                          <Github className="w-4 h-4" />
-                        </a>
-                        <a 
-                          href={member.social.twitter} 
-                          className={`w-8 h-8 rounded-full flex items-center justify-center ${isDarkMode ? 'bg-gray-800 text-cyan-400' : 'bg-white text-violet-600'} hover:scale-110 transition-transform`}
-                        >
-                          <Twitter className="w-4 h-4" />
-                        </a>
-                        <a 
-                          href={`mailto:${member.social.email}`} 
-                          className={`w-8 h-8 rounded-full flex items-center justify-center ${isDarkMode ? 'bg-gray-800 text-cyan-400' : 'bg-white text-violet-600'} hover:scale-110 transition-transform`}
-                        >
-                          <Mail className="w-4 h-4" />
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                
-                <div className="p-6 text-center">
-                  <h3 className={`text-xl font-semibold mb-1 ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>{member.name}</h3>
-                  <p className={`mb-3 ${isDarkMode ? 'text-cyan-400' : 'text-violet-600'}`}>{member.role}</p>
-                  <p className={`text-sm mb-4 ${isDarkMode ? 'text-gray-300' : 'text-gray-600'}`}>{member.bio}</p>
-                  
-                  <button
-                    onClick={() => toggleExpand(member.id)}
-                    className={`w-full py-2 rounded-lg flex items-center justify-center ${isDarkMode ? 'bg-gray-700 text-cyan-400 hover:bg-gray-600' : 'bg-gray-100 text-violet-600 hover:bg-gray-200'} transition-colors`}
-                  >
-                    {expandedMember === member.id ? (
-                      <>
-                        <span className="mr-1">Less</span>
-                        <ChevronUp className="w-4 h-4" />
-                      </>
-                    ) : (
-                      <>
-                        <span className="mr-1">More</span>
-                        <ChevronDown className="w-4 h-4" />
-                      </>
-                    )}
-                  </button>
-                  
-                  {expandedMember === member.id && (
-                    <motion.div
-                      initial={{ opacity: 0, height: 0 }}
-                      animate={{ opacity: 1, height: 'auto' }}
-                      exit={{ opacity: 0, height: 0 }}
-                      className="mt-4"
-                    >
-                      <p className={`text-sm mb-4 ${isDarkMode ? 'text-gray-300' : 'text-gray-600'}`}>{member.fullBio}</p>
-                      
-                      <div className="mb-4">
-                        <h4 className={`font-semibold mb-2 ${isDarkMode ? 'text-cyan-400' : 'text-violet-600'}`}>Skills</h4>
-                        <div className="flex flex-wrap gap-2 justify-center">
-                          {member.skills.map((skill, index) => (
-                            <span 
-                              key={index}
-                              className={`px-3 py-1 rounded-full text-xs ${isDarkMode ? 'bg-violet-900/30 text-cyan-400' : 'bg-violet-100 text-violet-700'}`}
-                            >
-                              {skill}
-                            </span>
-                          ))}
+              <CardContainer key={member.id} className="w-full" containerClassName="py-0">
+                <CardBody className={`rounded-xl overflow-hidden shadow-lg ${isDarkMode ? 'bg-gray-800' : 'bg-white'} p-0`}>
+                  <CardItem translateZ={60} className="relative group block">
+                    <img src={member.image} alt={member.name} className="w-full h-64 object-cover" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
+                      <div className="p-4 w-full">
+                        <div className="flex justify-center space-x-3">
+                          <a href={member.social.linkedin} className={`w-8 h-8 rounded-full flex items-center justify-center ${isDarkMode ? 'bg-gray-800 text-cyan-400' : 'bg-white text-violet-600'} hover:scale-110 transition-transform`}>
+                            <Linkedin className="w-4 h-4" />
+                          </a>
+                          <a href={member.social.github} className={`w-8 h-8 rounded-full flex items-center justify-center ${isDarkMode ? 'bg-gray-800 text-cyan-400' : 'bg-white text-violet-600'} hover:scale-110 transition-transform`}>
+                            <Github className="w-4 h-4" />
+                          </a>
+                          <a href={member.social.twitter} className={`w-8 h-8 rounded-full flex items-center justify-center ${isDarkMode ? 'bg-gray-800 text-cyan-400' : 'bg-white text-violet-600'} hover:scale-110 transition-transform`}>
+                            <Twitter className="w-4 h-4" />
+                          </a>
+                          <a href={`mailto:${member.social.email}`} className={`w-8 h-8 rounded-full flex items-center justify-center ${isDarkMode ? 'bg-gray-800 text-cyan-400' : 'bg-white text-violet-600'} hover:scale-110 transition-transform`}>
+                            <Mail className="w-4 h-4" />
+                          </a>
                         </div>
                       </div>
-                      
-                      <div>
-                        <h4 className={`font-semibold mb-2 ${isDarkMode ? 'text-cyan-400' : 'text-violet-600'}`}>Fun Fact</h4>
-                        <p className={`text-sm ${isDarkMode ? 'text-gray-300' : 'text-gray-600'}`}>{member.funFact}</p>
-                      </div>
-                    </motion.div>
-                  )}
-                </div>
-              </motion.div>
+                    </div>
+                  </CardItem>
+                  <div className="p-6 text-center">
+                    <CardItem translateZ={40} className={`text-xl font-semibold mb-1 ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>{member.name}</CardItem>
+                    <CardItem translateZ={30} className={`mb-3 ${isDarkMode ? 'text-cyan-400' : 'text-violet-600'}`}>{member.role}</CardItem>
+                    <CardItem translateZ={20} className={`text-sm mb-4 ${isDarkMode ? 'text-gray-300' : 'text-gray-600'}`}>{member.bio}</CardItem>
+                    <CardItem translateZ={20} as="button"
+                      onClick={() => toggleExpand(member.id)}
+                      className={`w-full py-2 rounded-lg flex items-center justify-center ${isDarkMode ? 'bg-gray-700 text-cyan-400 hover:bg-gray-600' : 'bg-gray-100 text-violet-600 hover:bg-gray-200'} transition-colors`}
+                    >
+                      {expandedMember === member.id ? (
+                        <>
+                          <span className="mr-1">Less</span>
+                          <ChevronUp className="w-4 h-4" />
+                        </>
+                      ) : (
+                        <>
+                          <span className="mr-1">More</span>
+                          <ChevronDown className="w-4 h-4" />
+                        </>
+                      )}
+                    </CardItem>
+                    {expandedMember === member.id && (
+                      <motion.div initial={{ opacity: 0, height: 0 }} animate={{ opacity: 1, height: 'auto' }} exit={{ opacity: 0, height: 0 }} className="mt-4">
+                        <p className={`text-sm mb-4 ${isDarkMode ? 'text-gray-300' : 'text-gray-600'}`}>{member.fullBio}</p>
+                        <div className="mb-4">
+                          <h4 className={`font-semibold mb-2 ${isDarkMode ? 'text-cyan-400' : 'text-violet-600'}`}>Skills</h4>
+                          <div className="flex flex-wrap gap-2 justify-center">
+                            {member.skills.map((skill, index) => (
+                              <span key={index} className={`px-3 py-1 rounded-full text-xs ${isDarkMode ? 'bg-violet-900/30 text-cyan-400' : 'bg-violet-100 text-violet-700'}`}>{skill}</span>
+                            ))}
+                          </div>
+                        </div>
+                        <div>
+                          <h4 className={`font-semibold mb-2 ${isDarkMode ? 'text-cyan-400' : 'text-violet-600'}`}>Fun Fact</h4>
+                          <p className={`text-sm ${isDarkMode ? 'text-gray-300' : 'text-gray-600'}`}>{member.funFact}</p>
+                        </div>
+                      </motion.div>
+                    )}
+                  </div>
+                </CardBody>
+              </CardContainer>
             ))}
           </motion.div>
         </div>

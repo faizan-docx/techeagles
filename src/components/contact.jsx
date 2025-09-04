@@ -11,6 +11,7 @@ import {
   MailIcon,
   PhoneIcon
 } from 'lucide-react';
+import Meteors from './ui/Meteors';
 
 const ContactPage = ({ isDarkMode }) => {
   const [formData, setFormData] = useState({
@@ -159,8 +160,9 @@ const ContactPage = ({ isDarkMode }) => {
                 <motion.div
                   key={index}
                   variants={itemVariants}
-                  className={`p-6 rounded-xl text-center ${isDarkMode ? 'bg-gray-800 hover:bg-gray-700' : 'bg-white hover:bg-gray-100'} transition-all duration-300 shadow-md`}
+                  className={`relative overflow-hidden p-6 rounded-xl text-center ${isDarkMode ? 'bg-gray-800 hover:bg-gray-700' : 'bg-white hover:bg-gray-100'} transition-all duration-300 shadow-md`}
                 >
+                  <Meteors number={16} />
                   <div className={`w-14 h-14 rounded-lg ${isDarkMode ? 'bg-violet-900/30' : 'bg-violet-100'} flex items-center justify-center mx-auto mb-4`}>
                     <IconComponent className={`w-7 h-7 ${isDarkMode ? 'text-cyan-400' : 'text-violet-600'}`} />
                   </div>
