@@ -157,10 +157,10 @@ const OurTeamPage = ({ isDarkMode }) => {
       fullBio: 'Daksh leads the Cybersecurity team, responsible for protecting TechEagles and our clients from digital threats. With expertise in ethical hacking, security protocols, and risk assessment, Daksh ensures our systems and data remain secure in an ever-evolving threat landscape.',
       skills: ['Ethical Hacking', 'Security Protocols', 'Risk Assessment', 'Penetration Testing'],
       social: {
-        linkedin: 'https://linkedin.com',
+        linkedin: 'https://www.linkedin.com/in/daksh-verma-210189248',
         twitter: 'https://twitter.com',
-        github: 'https://github.com',
-        email: 'daksh@techeagles.com'
+        github: ' https://github.com/DakshVerma0001',
+        email: 'vermadaksh353@gmail.com'
       },
       funFact: 'Daksh participates in cybersecurity competitions and enjoys staying updated with the latest security trends.'
     },

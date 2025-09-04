@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Sun, Moon, Menu, X, ChevronDown } from 'lucide-react';
 import { Link, useLocation } from 'react-router-dom';
-import EagleLogo from './eagleLogo';
+// Removed inline SVG logo in favor of public/logo.jpeg
 
 // Wrap Link with motion
 const MotionLink = motion(Link);
@@ -121,7 +121,7 @@ const Navigation = ({ isDarkMode, setIsDarkMode }) => {
                 transition={{ duration: 3, repeat: Infinity, ease: "linear" }}
               />
               <div className="relative z-10">
-                <EagleLogo />
+                <img src="/logo.png" alt="TechEagles logo" className="w-8 h-8 rounded object-cover" />
               </div>
               
               
