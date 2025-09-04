@@ -107,21 +107,20 @@ const SleekLineCursor = ({
       if (e.touches && e.touches.length) {
         posRef.current.x = e.touches[0].pageX;
         posRef.current.y = e.touches[0].pageY;
-      } else {
+      } else if (e.clientX != null && e.clientY != null) {
         posRef.current.x = e.clientX;
         posRef.current.y = e.clientY;
       }
-      e.preventDefault?.();
     };
 
     const onFirstMove = (e) => {
       document.removeEventListener('mousemove', onFirstMove);
       document.removeEventListener('touchstart', onFirstMove);
-      document.addEventListener('mousemove', updatePosition, { passive: false });
-      document.addEventListener('touchmove', updatePosition, { passive: false });
+      document.addEventListener('mousemove', updatePosition, { passive: true });
+      document.addEventListener('touchmove', updatePosition, { passive: true });
       document.addEventListener('touchstart', (evt) => {
         if (evt.touches.length === 1) updatePosition(evt);
-      }, { passive: false });
+      }, { passive: true });
       updatePosition(e);
       createLines();
       render();
@@ -167,8 +166,8 @@ const SleekLineCursor = ({
       ctx.running = false;
       document.removeEventListener('mousemove', onFirstMove);
       document.removeEventListener('touchstart', onFirstMove);
-      document.removeEventListener('mousemove', updatePosition);
-      document.removeEventListener('touchmove', updatePosition);
+      document.removeEventListener('mousemove', updatePosition, { passive: true });
+      document.removeEventListener('touchmove', updatePosition, { passive: true });
       window.removeEventListener('resize', resizeCanvas);
       window.removeEventListener('focus', handleFocus);
       window.removeEventListener('blur', handleBlur);
