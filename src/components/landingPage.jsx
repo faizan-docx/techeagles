@@ -3,7 +3,6 @@ import { motion } from 'framer-motion';
 import { useNavigate } from 'react-router-dom';
 import { MacbookScroll } from './ui/macbook-scroll';
 import { BackgroundLines } from './ui/background-lines';
-import TechGridBackground from './ui/tech-grid';
  
 
 const LandingPage = ({ isDarkMode }) => {
@@ -92,9 +91,7 @@ const LandingPage = ({ isDarkMode }) => {
   };
 
   return (
-    <div className={`min-h-screen flex flex-col items-center justify-between relative overflow-hidden ${isDarkMode ? 'bg-gray-950' : 'bg-white'}`}>
-      {/* Tech grid background */}
-      <TechGridBackground dark={isDarkMode} />
+    <div className={`min-h-screen flex flex-col items-center justify-between relative overflow-hidden ${isDarkMode ? 'bg-gray-900' : 'bg-gray-50'}`}>
       {/* Animated Background Elements */}
       <motion.div
         className="absolute top-20 left-20 w-32 h-32 rounded-full opacity-10 blur-xl"
