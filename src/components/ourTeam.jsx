@@ -6,7 +6,7 @@ import {
   Linkedin, 
   Github, 
   Mail,
-  Twitter,
+  Instagram,
   Award,
   Calendar,
   MapPin,
@@ -30,7 +30,7 @@ const OurTeamPage = ({ isDarkMode }) => {
       skills: ['Strategic Leadership', 'Team Management', 'Innovation', 'Vision Planning'],
       social: {
         linkedin: 'https://linkedin.com',
-        twitter: 'https://twitter.com',
+        instagram: 'https://instagram.com',
         github: 'https://github.com',
         email: 'amaan@techeagles.com'
       },
@@ -46,7 +46,7 @@ const OurTeamPage = ({ isDarkMode }) => {
       skills: ['Administration', 'Communication', 'Organization', 'Coordination'],
       social: {
         linkedin: 'https://linkedin.com',
-        twitter: 'https://twitter.com',
+        instagram: 'https://instagram.com',
         github: 'https://github.com',
         email: 'abhishek@techeagles.com'
       },
@@ -62,7 +62,7 @@ const OurTeamPage = ({ isDarkMode }) => {
       skills: ['Strategic Planning', 'Vision Development', 'Technology Trends', 'Innovation'],
       social: {
         linkedin: 'https://linkedin.com',
-        twitter: 'https://twitter.com',
+        instagram: 'https://instagram.com',
         github: 'https://github.com',
         email: 'harshit@techeagles.com'
       },
@@ -78,28 +78,13 @@ const OurTeamPage = ({ isDarkMode }) => {
       skills: ['React', 'Node.js', 'JavaScript', 'Web Architecture'],
       social: {
         linkedin: 'https://linkedin.com',
-        twitter: 'https://twitter.com',
+        instagram: 'https://instagram.com',
         github: 'https://github.com',
         email: 'faizan@techeagles.com'
       },
       funFact: 'Faizan loves exploring new web technologies and often experiments with the latest frameworks.'
     },
-    {
-      id: 5,
-      name: 'Shreya Goel',
-      role: 'UI/UX & Content Lead',
-      image: '/team-images/shreya_goel.png',
-      bio: 'Creating beautiful user experiences and compelling content that engages and inspires.',
-      fullBio: 'Shreya leads both UI/UX design and content creation at TechEagles. With a keen eye for design and excellent writing skills, Shreya ensures our products are not only functional but also visually appealing and our content resonates with our audience.',
-      skills: ['UI/UX Design', 'Content Writing', 'Figma', 'User Research'],
-      social: {
-        linkedin: 'https://linkedin.com',
-        twitter: 'https://twitter.com',
-        github: 'https://github.com',
-        email: 'shreya@techeagles.com'
-      },
-      funFact: 'Shreya is an avid reader and often draws inspiration from literature for her design work.'
-    },
+    
     {
       id: 6,
       name: 'Divyansh Mogra',
@@ -110,7 +95,7 @@ const OurTeamPage = ({ isDarkMode }) => {
       skills: ['React Native', 'Flutter', 'Mobile Development', 'Cross-platform'],
       social: {
         linkedin: 'https://linkedin.com',
-        twitter: 'https://twitter.com',
+        instagram: 'https://instagram.com',
         github: 'https://github.com',
         email: 'divyansh@techeagles.com'
       },
@@ -126,7 +111,7 @@ const OurTeamPage = ({ isDarkMode }) => {
       skills: ['Machine Learning', 'Deep Learning', 'Python', 'Data Science'],
       social: {
         linkedin: 'https://linkedin.com',
-        twitter: 'https://twitter.com',
+        instagram: 'https://instagram.com',
         github: 'https://github.com',
         email: 'saee@techeagles.com'
       },
@@ -142,7 +127,7 @@ const OurTeamPage = ({ isDarkMode }) => {
       skills: ['Kubernetes', 'Docker', 'AWS', 'CI/CD'],
       social: {
         linkedin: 'https://linkedin.com',
-        twitter: 'https://twitter.com',
+        instagram: 'https://instagram.com',
         github: 'https://github.com',
         email: 'manjot@techeagles.com'
       },
@@ -157,10 +142,10 @@ const OurTeamPage = ({ isDarkMode }) => {
       fullBio: 'Daksh leads the Cybersecurity team, responsible for protecting TechEagles and our clients from digital threats. With expertise in ethical hacking, security protocols, and risk assessment, Daksh ensures our systems and data remain secure in an ever-evolving threat landscape.',
       skills: ['Ethical Hacking', 'Security Protocols', 'Risk Assessment', 'Penetration Testing'],
       social: {
-        linkedin: 'https://linkedin.com',
-        twitter: 'https://twitter.com',
-        github: 'https://github.com',
-        email: 'daksh@techeagles.com'
+        linkedin: 'https://www.linkedin.com/in/daksh-verma-210189248',
+        instagram: 'https://www.instagram.com/__dakshx?igsh=NmlkZTVwaWwzbzV6&utm_source=qr',
+        github: ' https://github.com/DakshVerma0001',
+        email: 'vermadaksh353@gmail.com'
       },
       funFact: 'Daksh participates in cybersecurity competitions and enjoys staying updated with the latest security trends.'
     },
@@ -173,12 +158,28 @@ const OurTeamPage = ({ isDarkMode }) => {
       fullBio: 'Sukhmani leads the Operations team, focusing on process optimization and project coordination. With excellent organizational skills and attention to detail, Sukhmani ensures all TechEagles projects are delivered on time and meet quality standards.',
       skills: ['Project Management', 'Process Optimization', 'Team Coordination', 'Quality Assurance'],
       social: {
-        linkedin: 'https://linkedin.com',
-        twitter: 'https://twitter.com',
-        github: 'https://github.com',
-        email: 'sukhmani@techeagles.com'
+        linkedin: 'https://www.linkedin.com/in/sukhmani-kaur-lamba/',
+        instagram: 'https://instagram.com/sukh_mani080105',
+        github: 'https://github.com/sukhmani8',
+        email: 'sukhmani8012005@gmail.com'
       },
       funFact: 'Sukhmani enjoys creating detailed project timelines and finding ways to improve team efficiency.'
+    },
+    {
+      id: 10,
+      name: 'Ananya Sinha',
+      role: 'Testing Lead',
+      image: '/team-images/ananya_sinha.png',
+      bio: 'Ensuring product quality through rigorous testing and QA processes.',
+      fullBio: 'Ananya leads testing initiatives, defining test strategies and implementing robust QA processes to ensure reliability and performance across all deliverables.',
+      skills: ['Manual Testing', 'Automation', 'Test Strategy', 'QA Processes'],
+      social: {
+        linkedin: 'https://www.linkedin.com/in/ananya-sinha-87407b286/',
+        instagram: 'https://instagram.com',
+        github: 'https://github.com',
+        email: 'anany08a@gmail.com'
+      },
+      funFact: 'Ananya enjoys building automation suites and improving test coverage.'
     },
     {
       id: 11,
@@ -190,11 +191,27 @@ const OurTeamPage = ({ isDarkMode }) => {
       skills: ['Training Development', 'Educational Design', 'Mentoring', 'Skill Assessment'],
       social: {
         linkedin: 'https://linkedin.com',
-        twitter: 'https://twitter.com',
-        github: 'https://github.com',
-        email: 'pakhi@techeagles.com'
+        instagram: ' https://www.instagram.com/pakhiisharma_/',
+        github: ' https://github.com/pakhi04',
+        email: 'paksh2004@gmail.com'
       },
       funFact: 'Pakhi loves creating interactive learning experiences and often incorporates gamification into training programs.'
+    },
+    {
+      id: 12,
+      name: 'Shreya Goel',
+      role: 'UI/UX & Content Lead',
+      image: '/team-images/shreya_goel.png',
+      bio: 'Creating beautiful user experiences and compelling content that engages and inspires.',
+      fullBio: 'Shreya leads both UI/UX design and content creation at TechEagles. With a keen eye for design and excellent writing skills, Shreya ensures our products are not only functional but also visually appealing and our content resonates with our audience.',
+      skills: ['UI/UX Design', 'Content Writing', 'Figma', 'User Research'],
+      social: {
+        linkedin: 'https://www.linkedin.com/in/shreya-goel-8b870928a/',
+        instagram: 'https://instagram.com/iamshreyagoel_',
+        github: 'https://github.com/shreya1410goel',
+        email: 'shreyag1410@gmail.com '
+      },
+      funFact: 'Shreya is an avid reader and often draws inspiration from literature for her design work.'
     },
     {
       id: 12,
@@ -206,7 +223,7 @@ const OurTeamPage = ({ isDarkMode }) => {
       skills: ['Digital Marketing', 'Brand Management', 'Social Media', 'Public Relations'],
       social: {
         linkedin: 'https://linkedin.com',
-        twitter: 'https://twitter.com',
+        instagram: 'https://instagram.com',
         github: 'https://github.com',
         email: 'chirag@techeagles.com'
       },
@@ -222,7 +239,7 @@ const OurTeamPage = ({ isDarkMode }) => {
       skills: ['Software Architecture', 'Development Practices', 'Technical Mentoring', 'Code Review'],
       social: {
         linkedin: 'https://linkedin.com',
-        twitter: 'https://twitter.com',
+        instagram: 'https://instagram.com',
         github: 'https://github.com',
         email: 'sandeep@techeagles.com'
       },
@@ -238,7 +255,7 @@ const OurTeamPage = ({ isDarkMode }) => {
       skills: ['Security Frameworks', 'Risk Assessment', 'Threat Analysis', 'Compliance'],
       social: {
         linkedin: 'https://linkedin.com',
-        twitter: 'https://twitter.com',
+        instagram: 'https://instagram.com',
         github: 'https://github.com',
         email: 'deepak@techeagles.com'
       },
@@ -253,10 +270,10 @@ const OurTeamPage = ({ isDarkMode }) => {
       fullBio: 'Kali serves as the Software Management Advisor at TechEagles, providing strategic oversight for project management and team coordination. With expertise in agile methodologies and software lifecycle management, Kali ensures projects are delivered efficiently while maintaining high quality standards.',
       skills: ['Project Management', 'Agile Methodologies', 'Team Coordination', 'Quality Assurance'],
       social: {
-        linkedin: 'https://linkedin.com',
-        twitter: 'https://twitter.com',
-        github: 'https://github.com',
-        email: 'kali@techeagles.com'
+        linkedin: 'https://www.linkedin.com/in/kali-singh-25990027a/',
+        instagram: 'https://www.instagram.com/_kalisingh_/',
+        github: 'https://github.com/kalisingh2277',
+        email: 'kalisingh2277@gmail.com'
       },
       funFact: 'Kali enjoys optimizing development workflows and implementing efficient project management practices.'
     }
@@ -264,7 +281,7 @@ const OurTeamPage = ({ isDarkMode }) => {
 
   // Team stats
   const teamStats = [
-    { icon: Users, value: '15', label: 'Team Members' },
+    { icon: Users, value: '16', label: 'Team Members' },
     { icon: Award, value: '10+', label: 'Years Combined Experience' },
     { icon: Calendar, value: '2025', label: 'Founded In' },
     { icon: MapPin, value: '1', label: 'Countries' },
@@ -278,7 +295,7 @@ const OurTeamPage = ({ isDarkMode }) => {
       setExpandedMember(id);
     }
   };
- 
+
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -371,44 +388,44 @@ const OurTeamPage = ({ isDarkMode }) => {
                 <CardBody className={`rounded-xl overflow-hidden shadow-lg ${isDarkMode ? 'bg-gray-800' : 'bg-white'} p-0`}>
                   <CardItem translateZ={60} className="relative group block">
                     <img src={member.image} alt={member.name} className="w-full h-64 object-cover" />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
-                      <div className="p-4 w-full">
-                        <div className="flex justify-center space-x-3">
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
+                    <div className="p-4 w-full">
+                      <div className="flex justify-center space-x-3">
                           <a href={member.social.linkedin} className={`w-8 h-8 rounded-full flex items-center justify-center ${isDarkMode ? 'bg-gray-800 text-cyan-400' : 'bg-white text-violet-600'} hover:scale-110 transition-transform`}>
-                            <Linkedin className="w-4 h-4" />
-                          </a>
+                          <Linkedin className="w-4 h-4" />
+                        </a>
                           <a href={member.social.github} className={`w-8 h-8 rounded-full flex items-center justify-center ${isDarkMode ? 'bg-gray-800 text-cyan-400' : 'bg-white text-violet-600'} hover:scale-110 transition-transform`}>
-                            <Github className="w-4 h-4" />
-                          </a>
-                          <a href={member.social.twitter} className={`w-8 h-8 rounded-full flex items-center justify-center ${isDarkMode ? 'bg-gray-800 text-cyan-400' : 'bg-white text-violet-600'} hover:scale-110 transition-transform`}>
-                            <Twitter className="w-4 h-4" />
+                          <Github className="w-4 h-4" />
+                        </a>
+                          <a href={member.social.instagram} className={`w-8 h-8 rounded-full flex items-center justify-center ${isDarkMode ? 'bg-gray-800 text-cyan-400' : 'bg-white text-violet-600'} hover:scale-110 transition-transform`}>
+                            <Instagram className="w-4 h-4" />
                           </a>
                           <a href={`mailto:${member.social.email}`} className={`w-8 h-8 rounded-full flex items-center justify-center ${isDarkMode ? 'bg-gray-800 text-cyan-400' : 'bg-white text-violet-600'} hover:scale-110 transition-transform`}>
-                            <Mail className="w-4 h-4" />
-                          </a>
-                        </div>
+                          <Mail className="w-4 h-4" />
+                        </a>
                       </div>
                     </div>
+                  </div>
                   </CardItem>
                   <div className="p-6 text-center">
                     <CardItem translateZ={40} className={`text-xl font-semibold mb-1 ${isDarkMode ? 'text-white' : 'text-gray-900'}`}>{member.name}</CardItem>
                     <CardItem translateZ={30} className={`mb-3 ${isDarkMode ? 'text-cyan-400' : 'text-violet-600'}`}>{member.role}</CardItem>
                     <CardItem translateZ={20} className={`text-sm mb-4 ${isDarkMode ? 'text-gray-300' : 'text-gray-600'}`}>{member.bio}</CardItem>
                     <CardItem translateZ={20} as="button"
-                      onClick={() => toggleExpand(member.id)}
-                      className={`w-full py-2 rounded-lg flex items-center justify-center ${isDarkMode ? 'bg-gray-700 text-cyan-400 hover:bg-gray-600' : 'bg-gray-100 text-violet-600 hover:bg-gray-200'} transition-colors`}
-                    >
-                      {expandedMember === member.id ? (
-                        <>
-                          <span className="mr-1">Less</span>
-                          <ChevronUp className="w-4 h-4" />
-                        </>
-                      ) : (
-                        <>
-                          <span className="mr-1">More</span>
-                          <ChevronDown className="w-4 h-4" />
-                        </>
-                      )}
+                    onClick={() => toggleExpand(member.id)}
+                    className={`w-full py-2 rounded-lg flex items-center justify-center ${isDarkMode ? 'bg-gray-700 text-cyan-400 hover:bg-gray-600' : 'bg-gray-100 text-violet-600 hover:bg-gray-200'} transition-colors`}
+                  >
+                    {expandedMember === member.id ? (
+                      <>
+                        <span className="mr-1">Less</span>
+                        <ChevronUp className="w-4 h-4" />
+                      </>
+                    ) : (
+                      <>
+                        <span className="mr-1">More</span>
+                        <ChevronDown className="w-4 h-4" />
+                      </>
+                    )}
                     </CardItem>
                     {expandedMember === member.id && (
                       <motion.div initial={{ opacity: 0, height: 0 }} animate={{ opacity: 1, height: 'auto' }} exit={{ opacity: 0, height: 0 }} className="mt-4">
@@ -434,7 +451,7 @@ const OurTeamPage = ({ isDarkMode }) => {
           </motion.div>
 
           {/* Rest of the Team */}
-          <motion.div
+                    <motion.div
             variants={containerVariants}
             initial="hidden"
             whileInView="visible"
@@ -455,8 +472,8 @@ const OurTeamPage = ({ isDarkMode }) => {
                           <a href={member.social.github} className={`w-8 h-8 rounded-full flex items-center justify-center ${isDarkMode ? 'bg-gray-800 text-cyan-400' : 'bg-white text-violet-600'} hover:scale-110 transition-transform`}>
                             <Github className="w-4 h-4" />
                           </a>
-                          <a href={member.social.twitter} className={`w-8 h-8 rounded-full flex items-center justify-center ${isDarkMode ? 'bg-gray-800 text-cyan-400' : 'bg-white text-violet-600'} hover:scale-110 transition-transform`}>
-                            <Twitter className="w-4 h-4" />
+                          <a href={member.social.instagram} className={`w-8 h-8 rounded-full flex items-center justify-center ${isDarkMode ? 'bg-gray-800 text-cyan-400' : 'bg-white text-violet-600'} hover:scale-110 transition-transform`}>
+                            <Instagram className="w-4 h-4" />
                           </a>
                           <a href={`mailto:${member.social.email}`} className={`w-8 h-8 rounded-full flex items-center justify-center ${isDarkMode ? 'bg-gray-800 text-cyan-400' : 'bg-white text-violet-600'} hover:scale-110 transition-transform`}>
                             <Mail className="w-4 h-4" />
@@ -487,22 +504,22 @@ const OurTeamPage = ({ isDarkMode }) => {
                     </CardItem>
                     {expandedMember === member.id && (
                       <motion.div initial={{ opacity: 0, height: 0 }} animate={{ opacity: 1, height: 'auto' }} exit={{ opacity: 0, height: 0 }} className="mt-4">
-                        <p className={`text-sm mb-4 ${isDarkMode ? 'text-gray-300' : 'text-gray-600'}`}>{member.fullBio}</p>
-                        <div className="mb-4">
-                          <h4 className={`font-semibold mb-2 ${isDarkMode ? 'text-cyan-400' : 'text-violet-600'}`}>Skills</h4>
+                      <p className={`text-sm mb-4 ${isDarkMode ? 'text-gray-300' : 'text-gray-600'}`}>{member.fullBio}</p>
+                      <div className="mb-4">
+                        <h4 className={`font-semibold mb-2 ${isDarkMode ? 'text-cyan-400' : 'text-violet-600'}`}>Skills</h4>
                           <div className="flex flex-wrap gap-2 justify-center">
-                            {member.skills.map((skill, index) => (
+                          {member.skills.map((skill, index) => (
                               <span key={index} className={`px-3 py-1 rounded-full text-xs ${isDarkMode ? 'bg-violet-900/30 text-cyan-400' : 'bg-violet-100 text-violet-700'}`}>{skill}</span>
-                            ))}
-                          </div>
+                          ))}
                         </div>
-                        <div>
-                          <h4 className={`font-semibold mb-2 ${isDarkMode ? 'text-cyan-400' : 'text-violet-600'}`}>Fun Fact</h4>
-                          <p className={`text-sm ${isDarkMode ? 'text-gray-300' : 'text-gray-600'}`}>{member.funFact}</p>
-                        </div>
-                      </motion.div>
-                    )}
-                  </div>
+                      </div>
+                      <div>
+                        <h4 className={`font-semibold mb-2 ${isDarkMode ? 'text-cyan-400' : 'text-violet-600'}`}>Fun Fact</h4>
+                        <p className={`text-sm ${isDarkMode ? 'text-gray-300' : 'text-gray-600'}`}>{member.funFact}</p>
+                      </div>
+                    </motion.div>
+                  )}
+                </div>
                 </CardBody>
               </CardContainer>
             ))}
