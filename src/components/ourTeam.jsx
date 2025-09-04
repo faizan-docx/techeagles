@@ -175,8 +175,8 @@ const OurTeamPage = ({ isDarkMode }) => {
       skills: ['Manual Testing', 'Automation', 'Test Strategy', 'QA Processes'],
       social: {
         linkedin: 'https://www.linkedin.com/in/ananya-sinha-87407b286/',
-        instagram: 'https://instagram.com',
-        github: 'https://github.com',
+        instagram: 'https://instagram.com/ananyasinha_26',
+        github: ' https://github.com/Ananyasinha7',
         email: 'anany08a@gmail.com'
       },
       funFact: 'Ananya enjoys building automation suites and improving test coverage.'
