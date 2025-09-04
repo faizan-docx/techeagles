@@ -75,19 +75,19 @@ const AboutPage = ({ isDarkMode }) => {
       icon: Clock
     },
     {
-      year: '2019',
+      year: '2025',
       title: 'First Major Client',
       description: 'Secured our first enterprise client and delivered a successful AI implementation.',
       icon: Award
     },
     {
-      year: '2020',
+      year: '2025',
       title: 'Team Expansion',
       description: 'Grew our team to 15 experts across development, design, and data science.',
       icon: Users
     },
     {
-      year: '2022',
+      year: '2025',
       title: 'Award Recognition',
       description: 'Received "Most Innovative Tech Solution" at the Global Tech Awards.',
       icon: Heart
