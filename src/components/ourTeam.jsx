@@ -158,7 +158,7 @@ const OurTeamPage = ({ isDarkMode }) => {
       skills: ['Ethical Hacking', 'Security Protocols', 'Risk Assessment', 'Penetration Testing'],
       social: {
         linkedin: 'https://www.linkedin.com/in/daksh-verma-210189248',
-        instagram: 'https://instagram.com',
+        instagram: 'https://www.instagram.com/__dakshx?igsh=NmlkZTVwaWwzbzV6&utm_source=qr',
         github: ' https://github.com/DakshVerma0001',
         email: 'vermadaksh353@gmail.com'
       },
@@ -253,10 +253,10 @@ const OurTeamPage = ({ isDarkMode }) => {
       fullBio: 'Kali serves as the Software Management Advisor at TechEagles, providing strategic oversight for project management and team coordination. With expertise in agile methodologies and software lifecycle management, Kali ensures projects are delivered efficiently while maintaining high quality standards.',
       skills: ['Project Management', 'Agile Methodologies', 'Team Coordination', 'Quality Assurance'],
       social: {
-        linkedin: 'https://linkedin.com',
-        instagram: 'https://instagram.com',
-        github: 'https://github.com',
-        email: 'kali@techeagles.com'
+        linkedin: 'https://www.linkedin.com/in/kali-singh-25990027a/',
+        instagram: 'https://www.instagram.com/_kalisingh_/',
+        github: 'https://github.com/kalisingh2277',
+        email: 'kalisingh2277@gmail.com'
       },
       funFact: 'Kali enjoys optimizing development workflows and implementing efficient project management practices.'
     }
