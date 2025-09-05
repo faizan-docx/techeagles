@@ -67,57 +67,57 @@ const OurTeamPage = ({ isDarkMode }) => {
       funFact: 'Arpit enjoys analyzing market trends and finding innovative ways to scale business operations.'
     },
    
-    {
-      id: 4,
-      name: 'Faizan Ahmad',
-      role: 'Web Development Lead',
-      image: '/team-images/faizan_ahmed.png',
-      bio: 'Leading web development initiatives with expertise in modern frameworks and technologies.',
-      fullBio: 'Faizan heads the Web Development team at TechEagles, specializing in creating responsive, scalable web applications. With deep knowledge of modern web technologies and frameworks, Faizan ensures our web solutions are cutting-edge and user-friendly.',
-      skills: ['React', 'Node.js', 'JavaScript', 'Web Architecture'],
-      social: {
-        linkedin: 'https://linkedin.com',
-        instagram: 'https://instagram.com',
-        github: 'https://github.com',
-        email: 'faizan@techeagles.com'
-      },
-      funFact: 'Faizan loves exploring new web technologies and often experiments with the latest frameworks.'
-    },
-    
-    {
-      id: 6,
-      name: 'Divyansh Mogra',
-      role: 'App Development Lead',
-      image: '/team-images/divyansh_mogra.png',
-      bio: 'Building innovative mobile applications that deliver exceptional user experiences.',
-      fullBio: 'Divyansh leads the App Development team, specializing in creating cross-platform mobile applications. With expertise in React Native, Flutter, and native development, Divyansh ensures our mobile solutions are performant and user-friendly across all platforms.',
-      skills: ['React Native', 'Flutter', 'Mobile Development', 'Cross-platform'],
-      social: {
-        linkedin: 'https://linkedin.com',
-        instagram: 'https://instagram.com',
-        github: 'https://github.com',
-        email: 'divyansh@techeagles.com'
-      },
-      funFact: 'Divyansh enjoys solving complex mobile development challenges and optimizing app performance.'
-    },
-    {
+   {
+  id: 4,
+  name: 'Saee Singh',
+  role: 'AI/ML Lead',
+  image: '/team-images/saee_singh.png',
+  bio: 'Pioneering artificial intelligence and machine learning solutions for the future.',
+  fullBio: 'Saee leads the AI/ML initiatives at TechEagles, working on cutting-edge artificial intelligence and machine learning projects. With expertise in deep learning, neural networks, and data science, Saee develops intelligent solutions that solve real-world problems.',
+  skills: ['Machine Learning', 'Deep Learning', 'Python', 'Data Science'],
+  social: {
+    linkedin: 'https://linkedin.com',
+    instagram: 'https://instagram.com',
+    github: 'https://github.com',
+    email: 'saee@techeagles.com'
+  },
+  funFact: 'Saee is fascinated by the intersection of AI and human creativity, often exploring generative AI applications.'
+},
+{
+  id: 5,
+  name: 'Faizan Ahmad',
+  role: 'Web Development Lead',
+  image: '/team-images/faizan_ahmed.png',
+  bio: 'Leading web development initiatives with expertise in modern frameworks and technologies.',
+  fullBio: 'Faizan heads the Web Development team at TechEagles, specializing in creating responsive, scalable web applications. With deep knowledge of modern web technologies and frameworks, Faizan ensures our web solutions are cutting-edge and user-friendly.',
+  skills: ['React', 'Node.js', 'JavaScript', 'Web Architecture'],
+  social: {
+    linkedin: 'https://linkedin.com',
+    instagram: 'https://instagram.com',
+    github: 'https://github.com',
+    email: 'faizan@techeagles.com'
+  },
+  funFact: 'Faizan loves exploring new web technologies and often experiments with the latest frameworks.'
+},
+{
+  id: 6,
+  name: 'Divyansh Mogra',
+  role: 'App Development Lead',
+  image: '/team-images/divyansh_mogra.png',
+  bio: 'Building innovative mobile applications that deliver exceptional user experiences.',
+  fullBio: 'Divyansh leads the App Development team, specializing in creating cross-platform mobile applications. With expertise in React Native, Flutter, and native development, Divyansh ensures our mobile solutions are performant and user-friendly across all platforms.',
+  skills: ['React Native', 'Flutter', 'Mobile Development', 'Cross-platform'],
+  social: {
+    linkedin: 'https://linkedin.com',
+    instagram: 'https://instagram.com',
+    github: 'https://github.com',
+    email: 'divyansh@techeagles.com'
+  },
+  funFact: 'Divyansh enjoys solving complex mobile development challenges and optimizing app performance.'
+},
+
+{
       id: 7,
-      name: 'Saee Singh',
-      role: 'AI/ML Lead',
-      image: '/team-images/saee_singh.png',
-      bio: 'Pioneering artificial intelligence and machine learning solutions for the future.',
-      fullBio: 'Saee leads the AI/ML initiatives at TechEagles, working on cutting-edge artificial intelligence and machine learning projects. With expertise in deep learning, neural networks, and data science, Saee develops intelligent solutions that solve real-world problems.',
-      skills: ['Machine Learning', 'Deep Learning', 'Python', 'Data Science'],
-      social: {
-        linkedin: 'https://linkedin.com',
-        instagram: 'https://instagram.com',
-        github: 'https://github.com',
-        email: 'saee@techeagles.com'
-      },
-      funFact: 'Saee is fascinated by the intersection of AI and human creativity, often exploring generative AI applications.'
-    },
-    {
-      id: 8,
       name: 'Manjot Singh',
       role: 'DevOps Lead',
       image: '/team-images/manjot_singh.png',
@@ -133,7 +133,7 @@ const OurTeamPage = ({ isDarkMode }) => {
       funFact: 'Manjot enjoys automating repetitive tasks and building efficient deployment workflows.'
     },
     {
-      id: 9,
+      id: 8,
       name: 'Daksh Verma',
       role: 'Cybersecurity Lead',
       image: '/team-images/daksh_verma.png',
@@ -149,7 +149,7 @@ const OurTeamPage = ({ isDarkMode }) => {
       funFact: 'Daksh participates in cybersecurity competitions and enjoys staying updated with the latest security trends.'
     },
     {
-      id: 10,
+      id: 9,
       name: 'Sukhmani Kaur',
       role: 'Operations Lead',
       image: '/team-images/sukhmani_kaur.png',
