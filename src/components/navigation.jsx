@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Sun, Moon, Menu, X, ChevronDown } from 'lucide-react';
 import { Link, useLocation } from 'react-router-dom';
+import Switch3D from './ui/3d-switch';
 // Removed inline SVG logo in favor of public/logo.jpeg
 
 // Wrap Link with motion
@@ -210,35 +211,14 @@ const Navigation = ({ isDarkMode, setIsDarkMode }) => {
 
           {/* Enhanced Right Side Controls */}
           <div className="flex items-center space-x-3">
-            {/* Enhanced Dark Mode Toggle */}
-            <motion.button
-              whileTap={{ scale: 0.9, rotate: 15 }}
-              whileHover={{ scale: 1.1, rotate: 5 }}
-              onClick={() => setIsDarkMode(!isDarkMode)}
-              className={`p-2.5 rounded-xl transition-all duration-300 relative overflow-hidden ${
-                isDarkMode
-                  ? 'bg-gray-800 text-cyan-400 hover:bg-gray-700 hover:shadow-lg hover:shadow-cyan-400/20'
-                  : 'bg-gray-100 text-gray-600 hover:bg-violet-100 hover:text-violet-600 hover:shadow-lg hover:shadow-violet-400/20'
-              }`}
+            {/* 3D Dark Mode Switch */}
+            <motion.div
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              className="relative"
             >
-              {/* Animated Background */}
-              <motion.div
-                className={`absolute inset-0 ${
-                  isDarkMode ? 'bg-gradient-to-r from-cyan-500/20 to-violet-500/20' : 'bg-gradient-to-r from-violet-500/20 to-cyan-500/20'
-                }`}
-                initial={{ opacity: 0 }}
-                whileHover={{ opacity: 1 }}
-                transition={{ duration: 0.2 }}
-              />
-              
-              <motion.div
-                className="relative z-10"
-                animate={{ rotate: isDarkMode ? 0 : 180 }}
-                transition={{ duration: 0.5, type: "spring" }}
-              >
-                {isDarkMode ? <Sun className="w-5 h-5" /> : <Moon className="w-5 h-5" />}
-              </motion.div>
-            </motion.button>
+              <Switch3D isDarkMode={isDarkMode} setIsDarkMode={setIsDarkMode} />
+            </motion.div>
 
             {/* Enhanced Mobile Menu Button */}
             <motion.button
