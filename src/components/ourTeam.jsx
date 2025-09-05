@@ -20,19 +20,19 @@ const OurTeamPage = ({ isDarkMode }) => {
   const teamMembers = [
     {
       id: 1,
-      name: 'Deepank Singh',
+      name: 'Nisha Verma',
       role: 'Director',
-      image: '/team-images/Deepank_Singh.png',
+      image: '/team-images/nisha_verma.png',
       bio: 'Shaping the future direction and process of TechEagles.',
-      fullBio: 'Deepank leads full Start-up with a forward-thinking approach and deep understanding of technology trends, Harshit helps shape the organization\'s goals and future initiatives.',
+      fullBio: 'Mrs Nisha leads full Start-up with a forward-thinking approach and deep understanding of technology trends,',
       skills: ['Strategic Planning', 'Vision Development', 'Technology Trends', 'Innovation'],
       social: {
-        linkedin: 'https://www.linkedin.com/in/harshit-mehra-185b35217/',
-        instagram: 'https://www.instagram.com/harshit.mehra_27/',
-        github: 'https://github.com/Harshitmehra-270709',
-        email: 'Mehra.harshit27@gmail.com'
+        // linkedin: 'https://www.linkedin.com/in/harshit-mehra-185b35217/',
+        // instagram: 'https://www.instagram.com/harshit.mehra_27/',
+        // github: 'https://github.com/Harshitmehra-270709',
+        // email: 'Mehra.harshit27@gmail.com'
       },
-      funFact: 'Singh enjoys researching emerging technologies and their potential impact on society.'
+      funFact: 'Mrs verma enjoys researching emerging technologies and their potential impact on society.'
     },
     {
       id: 2,
@@ -408,13 +408,16 @@ const OurTeamPage = ({ isDarkMode }) => {
                   <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
                     <div className="p-4 w-full">
                       <div className="flex justify-center space-x-3">
-                          <a href={member.social.linkedin} className={`w-8 h-8 rounded-full flex items-center justify-center ${isDarkMode ? 'bg-gray-800 text-cyan-400' : 'bg-white text-violet-600'} hover:scale-110 transition-transform`}>
-                          <Linkedin className="w-4 h-4" />
-                        </a>
-                          <a href={member.social.github} className={`w-8 h-8 rounded-full flex items-center justify-center ${isDarkMode ? 'bg-gray-800 text-cyan-400' : 'bg-white text-violet-600'} hover:scale-110 transition-transform`}>
-                          <Github className="w-4 h-4" />
-                        </a>
-                          
+                        {member.social.linkedin && member.social.linkedin !== 'https://linkedin.com' && (
+                          <a href={member.social.linkedin} target="_blank" rel="noopener noreferrer" className={`w-8 h-8 rounded-full flex items-center justify-center ${isDarkMode ? 'bg-gray-800 text-cyan-400' : 'bg-white text-violet-600'} hover:scale-110 transition-transform`}>
+                            <Linkedin className="w-4 h-4" />
+                          </a>
+                        )}
+                        {member.social.github && member.social.github !== 'https://github.com' && (
+                          <a href={member.social.github} target="_blank" rel="noopener noreferrer" className={`w-8 h-8 rounded-full flex items-center justify-center ${isDarkMode ? 'bg-gray-800 text-cyan-400' : 'bg-white text-violet-600'} hover:scale-110 transition-transform`}>
+                            <Github className="w-4 h-4" />
+                          </a>
+                        )}
                       </div>
                     </div>
                   </div>
@@ -478,13 +481,16 @@ const OurTeamPage = ({ isDarkMode }) => {
                     <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
                       <div className="p-4 w-full">
                         <div className="flex justify-center space-x-3">
-                          <a href={member.social.linkedin} className={`w-8 h-8 rounded-full flex items-center justify-center ${isDarkMode ? 'bg-gray-800 text-cyan-400' : 'bg-white text-violet-600'} hover:scale-110 transition-transform`}>
-                            <Linkedin className="w-4 h-4" />
-                          </a>
-                          <a href={member.social.github} className={`w-8 h-8 rounded-full flex items-center justify-center ${isDarkMode ? 'bg-gray-800 text-cyan-400' : 'bg-white text-violet-600'} hover:scale-110 transition-transform`}>
-                            <Github className="w-4 h-4" />
-                          </a>
-                          
+                          {member.social.linkedin && member.social.linkedin !== 'https://linkedin.com' && (
+                            <a href={member.social.linkedin} target="_blank" rel="noopener noreferrer" className={`w-8 h-8 rounded-full flex items-center justify-center ${isDarkMode ? 'bg-gray-800 text-cyan-400' : 'bg-white text-violet-600'} hover:scale-110 transition-transform`}>
+                              <Linkedin className="w-4 h-4" />
+                            </a>
+                          )}
+                          {member.social.github && member.social.github !== 'https://github.com' && (
+                            <a href={member.social.github} target="_blank" rel="noopener noreferrer" className={`w-8 h-8 rounded-full flex items-center justify-center ${isDarkMode ? 'bg-gray-800 text-cyan-400' : 'bg-white text-violet-600'} hover:scale-110 transition-transform`}>
+                              <Github className="w-4 h-4" />
+                            </a>
+                          )}
                         </div>
                       </div>
                     </div>
