@@ -69,7 +69,7 @@ const OurTeamPage = ({ isDarkMode }) => {
    
     {
       id: 4,
-      name: 'Faizan Ahmed',
+      name: 'Faizan Ahmad',
       role: 'Web Development Lead',
       image: '/team-images/faizan_ahmed.png',
       bio: 'Leading web development initiatives with expertise in modern frameworks and technologies.',
