@@ -266,33 +266,29 @@ const Footer = ({ isDarkMode }) => {
         </div>
         
         <motion.div 
-          className={`pt-8 border-t ${isDarkMode ? 'border-violet-900' : 'border-gray-200'} text-center text-sm relative`}
+          className={`pt-8 border-t ${isDarkMode ? 'border-violet-900 text-gray-400' : 'border-gray-200 text-gray-600'} text-center text-sm relative`}
           variants={itemVariants}
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.3 }}
         >
-          {/* Copyright Text in Green */}
-          <div className="mb-2">
-            <motion.span
-              className="inline-block mr-1"
-              animate={{ rotate: [0, 10, -10, 0] }}
-              transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
-            >
-              ©
-            </motion.span>
-            <span className="text-green-600 font-semibold">
-              {new Date().getFullYear()} TechEagles. All rights reserved.
-            </span>
-          </div>
+          {/* Animated Copyright Symbol */}
+          <motion.span
+            className="inline-block mr-1"
+            animate={{ rotate: [0, 10, -10, 0] }}
+            transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
+          >
+            ©
+          </motion.span>
+          {new Date().getFullYear()} TechEagles. All rights reserved.
           
-          {/* Mahakumbrix in Orange */}
+          {/* Mahakumbrix entrepreneurship */}
           <motion.div
-            className="text-orange-500 font-bold text-lg"
+            className="text-sm mt-2"
             whileHover={{ scale: 1.05 }}
             transition={{ type: "spring", stiffness: 400 }}
           >
-            Mahakumbrix
+            Mahakumbrix entrepreneurship
           </motion.div>
           
           {/* Floating Particles */}
