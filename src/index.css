@@ -238,8 +238,8 @@ button:focus-visible {
 /* From Uiverse.io by ayyjayy2 */ 
 .neumorphic-form {
   --input-focus: #2d8cf0;
-  --font-color: #0b0606;
-  --font-color-sub: #666;
+  --font-color: rgb(245, 245, 220);
+  --font-color-sub: rgb(245, 245, 220);
   --bg-color: beige;
   --main-color: black;
   padding: 20px;
