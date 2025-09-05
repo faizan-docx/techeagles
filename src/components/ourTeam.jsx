@@ -291,22 +291,6 @@ const OurTeamPage = ({ isDarkMode }) => {
         email: 'Mehra.harshit27@gmail.com'
       },
       funFact: 'Harshit enjoys researching emerging technologies and their potential impact on society.'
-    },
-    {
-      id: 16,
-      name: 'Abhishek',
-      role: 'Secretary',
-      image: '/team-images/abhishek.png',
-      bio: 'Managing operations and ensuring smooth coordination across all TechEagles activities.',
-      fullBio: 'Abhishek serves as the Secretary of TechEagles, handling administrative duties and ensuring effective communication across all departments. With excellent organizational skills and attention to detail, Abhishek keeps the team aligned and operations running smoothly.',
-      skills: ['Administration', 'Communication', 'Organization', 'Coordination'],
-      social: {
-        linkedin: 'https://linkedin.com',
-        instagram: 'https://instagram.com',
-        github: 'https://github.com',
-        email: 'abhishek@techeagles.com'
-      },
-      funFact: 'Abhishek enjoys documenting processes and creating efficient workflows for the team.'
     }
   ];
   
