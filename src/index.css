@@ -243,7 +243,7 @@ button:focus-visible {
   --bg-color: beige;
   --main-color: black;
   padding: 20px;
-  background: lightblue;
+  background: rgb(97, 113, 118);
   display: flex;
   flex-direction: column;
   align-items: flex-start;
