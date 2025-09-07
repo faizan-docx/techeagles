@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Sun, Moon, Menu, X, ChevronDown } from 'lucide-react';
 import { Link, useLocation } from 'react-router-dom';
-import Switch3D from './ui/3d-switch';
+import ThemeSwitch from './ui/theme-switch';
 // Removed inline SVG logo in favor of public/logo.jpeg
 
 // Wrap Link with motion
@@ -217,7 +217,7 @@ const Navigation = ({ isDarkMode, setIsDarkMode }) => {
               whileTap={{ scale: 0.95 }}
               className="relative"
             >
-              <Switch3D isDarkMode={isDarkMode} setIsDarkMode={setIsDarkMode} />
+              <ThemeSwitch isDarkMode={isDarkMode} setIsDarkMode={setIsDarkMode} />
             </motion.div>
 
             {/* Enhanced Mobile Menu Button */}
