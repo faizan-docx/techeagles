@@ -71,91 +71,89 @@ const QRCodeGenerator = () => {
 
   return (
     <div className="qr-generator">
-      <header className="header">
-        <h1 className="logo"># QRCix</h1>
-        <p className="subtitle">BY TECH EAGLES</p>
-      </header>
-
-      <section className="qr-type-section">
-        <h2 className="section-title">Select QR Type</h2>
-        <div className="qr-type-grid">
-          {qrTypes.map((type) => (
-            <button
-              key={type}
-              className={`qr-type-btn ${selectedType === type ? 'active' : ''}`}
-              onClick={() => setSelectedType(type)}
-            >
-              {type}
-            </button>
-          ))}
+      <div className="qr-container">
+        <div className="qr-header">
+          <h1 className="qr-brand">QRcix by Tech Eagles</h1>
+          <p className="qr-sub">Generate QR codes instantly</p>
         </div>
-      </section>
-
-      <section className="input-section">
-        {selectedType === 'URL' && (
-          <div className="input-group">
-            <label htmlFor="website-url">Website URL</label>
-            <input
-              id="website-url"
-              type="text"
-              value={websiteUrl}
-              onChange={(e) => setWebsiteUrl(e.target.value)}
-              placeholder="https://example.com"
-            />
-          </div>
-        )}
-        {selectedType !== 'URL' && (
-          <div className="input-group">
-            <label>{selectedType} Content</label>
-            <input
-              type="text"
-              placeholder={`Enter ${selectedType} content...`}
-            />
-          </div>
-        )}
-      </section>
-
-      <div className="divider"></div>
-
-      <section className="generate-section">
-        <button className="generate-btn" onClick={handleGenerateQRCode}>
-          GENERATE QR CODE
-        </button>
-      </section>
-
-      <div className="divider"></div>
-
-      <section className="qr-display-section">
-        <div className="qr-display">
-          {qrCodeData ? (
-            <div className="qr-code-preview">
-              <div className="qr-code-placeholder">
-                <div ref={qrContainerRef} id="qrcode" />
-              </div>
-              <p className="qr-content">{qrCodeData.content}</p>
-              <button className="download-btn" onClick={handleDownload}>
-                DOWNLOAD QR CODE
+        
+        <section className="qr-type-section">
+          <h2 className="section-title">Select QR Type</h2>
+          <div className="qr-type-grid">
+            {qrTypes.map((type) => (
+              <button
+                key={type}
+                className={`qr-type-btn ${selectedType === type ? 'active' : ''}`}
+                onClick={() => setSelectedType(type)}
+              >
+                {type}
               </button>
-            </div>
-          ) : (
-            <div className="qr-placeholder">
-              <p>Your QR Code Will Appear Here</p>
-              <p className="placeholder-subtext">
-                Select a type and generate your QR code
-              </p>
-              <button className="download-btn disabled" disabled>
-                DOWNLOAD QR CODE
-              </button>
+            ))}
+          </div>
+        </section>
+
+        <section className="input-section">
+          {selectedType === 'URL' && (
+            <div className="input-group">
+              <label htmlFor="website-url">Website URL</label>
+              <input
+                id="website-url"
+                type="text"
+                value={websiteUrl}
+                onChange={(e) => setWebsiteUrl(e.target.value)}
+                placeholder="https://example.com"
+              />
             </div>
           )}
-        </div>
-      </section>
+          {selectedType !== 'URL' && (
+            <div className="input-group">
+              <label>{selectedType} Content</label>
+              <input
+                type="text"
+                placeholder={`Enter ${selectedType} content...`}
+              />
+            </div>
+          )}
+        </section>
+
+        <div className="divider"></div>
+
+        <section className="generate-section">
+          <button className="generate-btn" onClick={handleGenerateQRCode}>
+            GENERATE QR CODE
+          </button>
+        </section>
+
+        <div className="divider"></div>
+
+        <section className="qr-display-section">
+          <div className="qr-display">
+            {qrCodeData ? (
+              <div className="qr-code-preview">
+                <div className="qr-code-placeholder">
+                  <div ref={qrContainerRef} id="qrcode" />
+                </div>
+                <p className="qr-content">{qrCodeData.content}</p>
+                <button className="download-btn" onClick={handleDownload}>
+                  DOWNLOAD QR CODE
+                </button>
+              </div>
+            ) : (
+              <div className="qr-placeholder">
+                <p>Your QR Code Will Appear Here</p>
+                <p className="placeholder-subtext">
+                  Select a type and generate your QR code
+                </p>
+                <button className="download-btn disabled" disabled>
+                  DOWNLOAD QR CODE
+                </button>
+              </div>
+            )}
+          </div>
+        </section>
+      </div>
     </div>
   );
 };
 
 export default QRCodeGenerator;
-
-
-
-

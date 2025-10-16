@@ -1,23 +1,29 @@
-/* Replaced with the user's requested simpler light theme CSS */
-/* Dark, modern styling aligned with site aesthetics */
+/* QRCodeGenerator.css */
 .qr-generator {
-  max-width: 720px;
-  margin: 3rem auto;
-  padding: 24px;
+  width: 100%;
+  min-height: 100vh;
+  margin: 0;
+  padding: 32px 16px;
   font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Arial, "Apple Color Emoji", "Segoe UI Emoji";
   background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.00)), #0b1020;
   color: #e6e8f0;
-  border-radius: 16px;
-  border: 1px solid #20263d;
-  box-shadow: 0 20px 60px rgba(0,0,0,0.35);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.header {
+.qr-container {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.qr-header {
   text-align: center;
-  margin-bottom: 30px;
+  margin-bottom: 32px;
 }
 
-.logo {
+.qr-brand {
   margin: 0;
   font-size: 28px;
   font-weight: 800;
@@ -28,74 +34,79 @@
   color: transparent;
 }
 
-.subtitle {
-  font-size: 12px;
+.qr-sub {
+  margin: 8px 0 0 0;
+  font-size: 14px;
   color: #7dd3fc;
-  margin: 6px 0 0 0;
   font-weight: 600;
 }
 
 .section-title {
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 700;
-  margin-bottom: 12px;
+  margin-bottom: 16px;
   color: #c7c9d3;
+  text-align: center;
 }
 
 .qr-type-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
-  gap: 10px;
-  margin-bottom: 16px;
+  gap: 12px;
+  margin-bottom: 24px;
 }
 
 .qr-type-btn {
-  padding: 10px 10px;
+  padding: 12px 10px;
   border: 1px solid #263056;
   background: #11162b;
   color: #c7c9d3;
   border-radius: 12px;
   cursor: pointer;
-  font-size: 12px;
+  font-size: 13px;
+  font-weight: 500;
   transition: all 0.2s ease;
 }
 
 .qr-type-btn:hover {
   border-color: #3b82f6;
   color: #e6e8f0;
+  transform: translateY(-2px);
 }
 
 .qr-type-btn.active {
   border-color: #7c3aed;
   box-shadow: 0 0 0 2px rgba(124,58,237,0.2) inset;
   color: #e6e8f0;
+  background: rgba(124,58,237,0.1);
 }
 
 .input-section {
-  margin-bottom: 16px;
+  margin-bottom: 24px;
 }
 
 .input-group {
-  margin-bottom: 15px;
+  margin-bottom: 20px;
 }
 
 .input-group label {
   display: block;
-  margin-bottom: 6px;
+  margin-bottom: 8px;
   font-weight: 600;
-  font-size: 14px;
+  font-size: 15px;
   color: #aab0c0;
 }
 
 .input-group input {
   width: 100%;
-  padding: 12px 14px;
+  padding: 14px 16px;
   border: 1px solid #263056;
   border-radius: 12px;
-  font-size: 14px;
+  font-size: 15px;
   background: #0f1427;
   color: #e6e8f0;
   box-sizing: border-box;
+  transition: all 0.2s ease;
 }
 
 .input-group input:focus {
@@ -107,46 +118,59 @@
 .divider {
   height: 1px;
   background: linear-gradient(90deg, transparent, #253054, transparent);
-  margin: 20px 0;
+  margin: 24px 0;
 }
 
 .generate-section {
   text-align: center;
-  margin: 20px 0;
+  margin: 24px 0;
 }
 
 .generate-btn {
-  padding: 12px 22px;
+  padding: 14px 28px;
   border-radius: 12px;
-  border: 1px solid #2c355a;
+  border: none;
   background: linear-gradient(90deg,#7c3aed,#06b6d4);
   color: white;
-  font-size: 15px;
+  font-size: 16px;
   font-weight: 700;
   cursor: pointer;
   letter-spacing: 0.3px;
+  transition: all 0.2s ease;
+  width: 100%;
+  max-width: 300px;
 }
 
-.generate-btn:hover { filter: brightness(1.05); }
+.generate-btn:hover {
+  filter: brightness(1.05);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(124,58,237,0.3);
+}
 
 .qr-display-section {
   text-align: center;
+  margin-top: 24px;
 }
 
 .qr-display {
-  min-height: 200px;
+  min-height: 300px;
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 20px;
+  border-radius: 16px;
+  background: rgba(15, 20, 39, 0.5);
+  border: 1px solid #253054;
 }
 
 .qr-placeholder {
   color: #9aa3ba;
+  padding: 20px;
 }
 
 .placeholder-subtext {
-  font-size: 12px;
-  margin-top: 5px;
+  font-size: 14px;
+  margin-top: 8px;
   color: #7d86a5;
 }
 
@@ -154,95 +178,105 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 15px;
+  gap: 20px;
+  width: 100%;
 }
 
 .qr-code-placeholder {
-  width: 180px;
-  height: 180px;
+  width: 200px;
+  height: 200px;
   border-radius: 16px;
   background: #0f1427;
   border: 1px dashed #33406d;
   display: flex;
   align-items: center;
   justify-content: center;
-}
-
-.qr-code-simulation { text-align: center; padding: 10px; }
-
-.qr-pattern {
-  width: 80px;
-  height: 80px;
-  background: repeating-linear-gradient(
-    45deg,
-    #1e2746,
-    #1e2746 6px,
-    #2b3560 6px,
-    #2b3560 12px
-  );
-  border-radius: 8px;
-  margin: 0 auto 10px;
+  padding: 10px;
 }
 
 .qr-content {
-  font-size: 12px;
+  font-size: 14px;
   word-break: break-all;
   color: #9aa3ba;
-  margin-top: 6px;
+  margin-top: 8px;
+  max-width: 100%;
+  padding: 0 10px;
 }
 
 .download-btn {
-  padding: 10px 16px;
+  padding: 12px 24px;
   border-radius: 12px;
-  border: 1px solid #2c355a;
+  border: none;
   background: linear-gradient(90deg,#7c3aed,#06b6d4);
   color: white;
-  font-size: 14px;
+  font-size: 15px;
   font-weight: 700;
   cursor: pointer;
+  transition: all 0.2s ease;
+  width: 100%;
+  max-width: 250px;
 }
 
-.download-btn:hover:not(.disabled) { filter: brightness(1.05); }
+.download-btn:hover:not(.disabled) {
+  filter: brightness(1.05);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(124,58,237,0.3);
+}
 
 .download-btn.disabled {
   opacity: 0.6;
   cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
 }
 
 /* Responsive design */
-@media (max-width: 480px) {
+@media (max-width: 768px) {
   .qr-generator {
-    padding: 16px;
-    margin: 12px;
+    padding: 20px 12px;
   }
   
   .qr-type-grid {
     grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+  }
+  
+  .qr-type-btn {
+    font-size: 12px;
+    padding: 10px 6px;
+  }
+  
+  .qr-code-placeholder {
+    width: 180px;
+    height: 180px;
+  }
+}
+
+@media (max-width: 480px) {
+  .qr-generator {
+    padding: 16px 10px;
+  }
+  
+  .qr-type-grid {
+    grid-template-columns: repeat(2, 1fr);
     gap: 8px;
   }
   
   .qr-type-btn {
     font-size: 11px;
-    padding: 8px 6px;
+    padding: 10px 6px;
+  }
+  
+  .qr-brand {
+    font-size: 24px;
+  }
+  
+  .qr-sub {
+    font-size: 13px;
+  }
+  
+  .qr-code-placeholder {
+    width: 160px;
+    height: 160px;
   }
 }
-
-.qr-content {
-  font-size: 0.8rem;
-  color: #9aa3ba;
-}
-
-.qr-placeholder {
-  text-align: center;
-  color: #9aa3ba;
-}
-
-.placeholder-subtext {
-  margin-top: 0.25rem;
-  font-size: 0.9rem;
-  color: #7d86a5;
-}
-
-
-
-

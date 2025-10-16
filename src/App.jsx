@@ -17,6 +17,7 @@ import SleekLineCursor from './components/ui/SleekLineCursor';
 function App() {
   const [isDarkMode, setIsDarkMode] = useState(true);
   const location = useLocation();
+  const hideChrome = location.pathname === '/qrcix';
 
   // Ensure on first load/refresh we start at the top
   useLayoutEffect(() => {
@@ -123,9 +124,11 @@ function App() {
         />
       </div>
 
-      <Navigation isDarkMode={isDarkMode} setIsDarkMode={setIsDarkMode} />
+      {!hideChrome && (
+        <Navigation isDarkMode={isDarkMode} setIsDarkMode={setIsDarkMode} />
+      )}
       
-      <main className="pt-16 relative z-10">
+      <main className={`${hideChrome ? 'pt-0' : 'pt-16'} relative z-10`}>
         <AnimatePresence mode="wait">
           <motion.div
             key={location.pathname}
@@ -150,7 +153,9 @@ function App() {
         </AnimatePresence>
       </main>
       
-      <Footer isDarkMode={isDarkMode} />
+      {!hideChrome && (
+        <Footer isDarkMode={isDarkMode} />
+      )}
     </div>
   );
 }
