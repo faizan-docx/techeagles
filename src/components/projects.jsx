@@ -39,6 +39,24 @@ const ProjectsPage = ({ isDarkMode }) => {
   // Projects data
   const projects = [
     {
+      id: 0,
+      title: 'QRCix – Smart QR Code Generator',
+      category: 'web',
+      client: 'Internal Tool',
+      year: '2025',
+      image: 'https://images.unsplash.com/photo-1605727216801-e27ce1d0cc28?q=80&w=1200&auto=format&fit=crop',
+      description: 'Create and download QR codes for URLs, text, WiFi, vCard and more.',
+      fullDescription: 'QRCix is a lightweight QR generator by Tech Eagles supporting multiple content types with an intuitive UI. Future updates will include high-resolution downloads and branding.',
+      technologies: ['React', 'Vite', 'CSS'],
+      challenges: 'Providing a unified UX for multiple QR types and future image export.',
+      solutions: 'Modular, type-driven inputs with a pluggable QR engine planned.',
+      results: 'Fast internal tool to quickly generate shareable QR assets.',
+      liveUrl: '/qrcix',
+      githubUrl: '',
+      teamSize: 2,
+      duration: '1 week'
+    },
+    {
       id: 1,
       title: 'AI-Powered Analytics Platform',
       category: 'ai',

@@ -9,6 +9,7 @@ import OurTeamPage from './components/ourTeam';
 import ContactPage from './components/contact';
 import TermsOfService from './components/termsOfService';
 import PrivacyPolicy from './components/privacyPolicy';
+import QRCodeGenerator from './components/qrcix';
 import Navigation from './components/navigation';
 import Footer from './components/footer';
 import SleekLineCursor from './components/ui/SleekLineCursor';
@@ -143,6 +144,7 @@ function App() {
               <Route path="/contact" element={<ContactPage isDarkMode={isDarkMode} />} />
               <Route path="/terms" element={<TermsOfService isDarkMode={isDarkMode} />} />
               <Route path="/privacy" element={<PrivacyPolicy isDarkMode={isDarkMode} />} />
+              <Route path="/qrcix" element={<QRCodeGenerator />} />
             </Routes>
           </motion.div>
         </AnimatePresence>
