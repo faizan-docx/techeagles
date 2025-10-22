@@ -116,7 +116,7 @@ const LandingPage = ({ isDarkMode }) => {
         transition={{ delay: 1 }}
       />
 
-      {/* Floating Decorative Elements */}
+      {/* Floating Decorative Elements*/}
       <motion.div
         className={`absolute top-1/4 right-1/4 w-4 h-4 rounded-full ${isDarkMode ? 'bg-cyan-400' : 'bg-violet-600'} opacity-60`}
         variants={floatingVariants}
